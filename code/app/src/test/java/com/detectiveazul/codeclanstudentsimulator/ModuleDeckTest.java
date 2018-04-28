@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 
 public class ModuleDeckTest {
@@ -28,7 +29,7 @@ public class ModuleDeckTest {
 
     @Test
     public void hasCards() {
-        assertEquals(1, deck00.getNumberOfCards());
+        assertEquals(2, deck00.getNumberOfCards());
         assertEquals(0, deck01.getCards().size());
     }
 
@@ -41,7 +42,7 @@ public class ModuleDeckTest {
     @Test
     public void drawCardEnoughCards() {
         Card card = deck00.drawCard();
-        assertEquals(0, deck00.getNumberOfCards());
+        assertEquals(1, deck00.getNumberOfCards());
         assertEquals("A beer", card.getName());
     }
 
@@ -51,4 +52,10 @@ public class ModuleDeckTest {
         assertEquals(0, deck01.getNumberOfCards());
         assertNull(card);
     }
+
+//    @Test
+//    public void canShuffleDeck() {
+//        deck00.shuffleDeck();
+//        assertNotEquals(CardCollection.TEST, deck00.drawCard().card());
+//    }
 }

@@ -3,6 +3,9 @@ package com.detectiveazul.codeclanstudentsimulator.model.constants;
 public enum CardCollection {
     TEST(1, "A beer" , "A friend want a beer", "Yes, please", "I should study...", Difficult.EASY,
             new StatEffect[] {StatEffect.ANXIETY_POSITIVE, StatEffect.SOCIAL_POSITIVE, StatEffect.MONEY_NEGATIVE},
+            new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE}),
+    TEST2(1, "A wine" , "A friend want a wine", "Yes, please", "I should study...", Difficult.EASY,
+            new StatEffect[] {StatEffect.ANXIETY_POSITIVE, StatEffect.SOCIAL_POSITIVE, StatEffect.MONEY_NEGATIVE},
             new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE});
 
     private final int module;

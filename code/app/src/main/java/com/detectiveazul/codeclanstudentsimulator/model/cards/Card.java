@@ -22,9 +22,10 @@ public class Card {
         setEffects();
     }
 
-    private CardCollection card() {
+    public CardCollection card() {
         return card;
     }
+
     public String getName() {
         return card().getName();
     }
