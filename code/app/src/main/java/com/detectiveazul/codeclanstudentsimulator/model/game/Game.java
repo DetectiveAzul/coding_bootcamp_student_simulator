@@ -102,18 +102,14 @@ public class Game {
     }
 
     //Player actions
-    public void playerTakeFirstOption() {
-
+    public void playerTakeFirstOption(Card card) {
+        player.takePrimaryAction(card);
     }
 
-    public void playerTakeSecondOption() {
-
+    public void playerTakeSecondOption(Card card) {
+        player.takeSecondaryAction(card);
     }
 
-    //Affect Player
-    public void affectPlayer() {
-
-    }
 
     //Increase&Decrease Player Score
     public void increasePlayerScore() {
