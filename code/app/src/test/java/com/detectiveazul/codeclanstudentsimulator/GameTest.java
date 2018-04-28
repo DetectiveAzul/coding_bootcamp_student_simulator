@@ -125,4 +125,10 @@ public class GameTest {
         game.increasePlayerScore(100);
         assertEquals(100, game.getPlayer().getScore());
     }
+
+    @Test
+    public void canDrawCard() {
+        Card card = game.drawCard();
+        assertNull(card);
+    }
 }

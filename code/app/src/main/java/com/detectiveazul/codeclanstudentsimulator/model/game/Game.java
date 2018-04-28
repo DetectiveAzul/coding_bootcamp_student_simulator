@@ -102,8 +102,10 @@ public class Game {
     }
 
     //Methods to handle decks
-    public void drawCard() {
-
+    public Card drawCard() {
+        Card card = null;
+       if (checkFirstDeckEmpty()) card = decks.get(0).drawCard();
+       return card;
     }
 
     public boolean checkFirstDeckEmpty() {
