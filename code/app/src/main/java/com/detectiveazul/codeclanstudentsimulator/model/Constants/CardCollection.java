@@ -2,13 +2,13 @@ package com.detectiveazul.codeclanstudentsimulator.model.Constants;
 
 import android.graphics.Bitmap;
 
+import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
 
 import java.lang.reflect.Array;
 
 public enum CardCollection {
-    TEST(1, "A beer", "A friend want a beer",
-            "Yes, please", "I should study...", Difficult.EASY,
+    TEST(1, "A beer" , "A friend want a beer", "Yes, please", "I should study...", Difficult.EASY,
             new StatEffect[] {StatEffect.ANXIETY_POSITIVE, StatEffect.SOCIAL_POSITIVE, StatEffect.MONEY_NEGATIVE},
             new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE});
 
