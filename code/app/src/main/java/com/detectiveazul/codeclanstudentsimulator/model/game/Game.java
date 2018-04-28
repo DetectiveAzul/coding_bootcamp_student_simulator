@@ -101,6 +101,19 @@ public class Game {
 
     }
 
+    //Methods to handle decks
+    public void drawCard() {
+
+    }
+
+    public boolean checkFirstDeckEmpty() {
+        return (decks.get(0).getNumberOfCards() == 0);
+    }
+
+    public void removeFirstDeck() {
+        decks.remove(0);
+    }
+
     //Player actions
     public void playerTakeFirstOption(Card card) {
         player.takePrimaryAction(card);

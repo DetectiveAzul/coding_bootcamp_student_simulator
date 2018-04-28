@@ -12,8 +12,8 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertNull;
-import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -86,18 +86,37 @@ public class GameTest {
     @Test
     public void gameCanHandlePlayerTakingPrimaryAction() {
         game.playerTakeFirstOption(card00);
-        Assert.assertEquals( 60,game.getPlayer().getStat(Stat.ANXIETY));
-        Assert.assertEquals( 40,game.getPlayer().getStat(Stat.MONEY));
-        Assert.assertEquals( 60,game.getPlayer().getStat(Stat.SOCIAL_LIFE));
+        assertEquals( 60,game.getPlayer().getStat(Stat.ANXIETY));
+        assertEquals( 40,game.getPlayer().getStat(Stat.MONEY));
+        assertEquals( 60,game.getPlayer().getStat(Stat.SOCIAL_LIFE));
 
     }
 
     @Test
     public void gameCanHandlePlayerTakingSecondaryAction() {
         game.playerTakeSecondOption(card00);
-        Assert.assertEquals( 40 ,game.getPlayer().getStat(Stat.ANXIETY));
-        Assert.assertEquals( 60,game.getPlayer().getStat(Stat.MONEY));
-        Assert.assertEquals( 40,game.getPlayer().getStat(Stat.SOCIAL_LIFE));
+        assertEquals( 40 ,game.getPlayer().getStat(Stat.ANXIETY));
+        assertEquals( 60,game.getPlayer().getStat(Stat.MONEY));
+        assertEquals( 40,game.getPlayer().getStat(Stat.SOCIAL_LIFE));
 
+    }
+
+    //These were tested with testCards from modules -1, -2
+//    @Test
+//    public void canCheckFirstDeckIsEmpty() {
+//        assertFalse(game.checkFirstDeckEmpty());
+//    }
+//
+//    @Test
+//    public void canCheckFirstDeckIsEmptyTrue() {
+//        game.getDecks().get(0).drawCard();
+//        game.getDecks().get(0).drawCard();
+//        assertTrue(game.checkFirstDeckEmpty());
+//    }
+    @Test
+    public void canRemoveDeck() {
+        game.removeFirstDeck();
+        game.removeFirstDeck();
+        assertEquals(1, game.getDecks().size());
     }
 }
