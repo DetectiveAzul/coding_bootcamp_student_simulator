@@ -9,8 +9,8 @@ import java.util.HashMap;
 
 public class Card {
     private CardCollection card;
-    protected boolean prize;
-    protected boolean projectWeek;
+    private boolean prize;
+    private boolean projectWeek;
     private HashMap<Stat, Boolean> primaryEffect;
     private HashMap<Stat, Boolean> secondaryEffect;
 

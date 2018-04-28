@@ -3,6 +3,8 @@ package com.detectiveazul.codeclanstudentsimulator;
 import com.detectiveazul.codeclanstudentsimulator.model.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
+import com.detectiveazul.codeclanstudentsimulator.model.Constants.NeutralCard;
+import com.detectiveazul.codeclanstudentsimulator.model.Constants.PrizeCard;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.ProjectWeekCard;
 
@@ -18,11 +20,15 @@ import static junit.framework.Assert.assertTrue;
 public class CardTest {
     private Card card00;
     private ProjectWeekCard card01;
+    private PrizeCard card02;
+    private NeutralCard card03;
 
     @Before
     public void setup() {
         card00 = new Card(CardCollection.TEST );
         card01 = new ProjectWeekCard(CardCollection.TEST);
+        card02 = new PrizeCard(CardCollection.TEST);
+        card03 = new NeutralCard(CardCollection.TEST);
 
     }
 
@@ -80,5 +86,18 @@ public class CardTest {
     @Test
     public void isProjectWeek() {
         assertTrue(card01.isProjectWeek());
+    }
+
+    @Test
+    public void prizeCardCanResetStats() {
+        assertFalse(card02.getPrimaryEffect().get(Stat.ANXIETY));
+        assertTrue(card02.getPrimaryEffect().get(Stat.MONEY ));
+        assertFalse(card02.getSecondaryEffect().get(Stat.SLEEP));
+        assertTrue(card02.getSecondaryEffect().get(Stat.SOCIAL_LIFE));
+    }
+
+    @Test
+    public void neutralCardNoDifficult() {
+        assertEquals(0, card03.getDifficult());
     }
 }

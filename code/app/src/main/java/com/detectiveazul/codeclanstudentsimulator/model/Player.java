@@ -52,18 +52,21 @@ public class Player {
     public void takePrimaryAction(Card card) {
         HashMap<Stat, Boolean> cardEffect = card.getPrimaryEffect();
         int difficult = card.getDifficult();
-        applyCardEfect(cardEffect, difficult);
+        applyCardEffect(cardEffect, difficult);
+
+        if (card.isProjectWeek()) projectWeekAnxiety();
+
     }
 
     public void takeSecondaryAction(Card card) {
         HashMap<Stat, Boolean> cardEffect = card.getSecondaryEffect();
         int difficult = card.getDifficult();
-        applyCardEfect(cardEffect, difficult);
+        applyCardEffect(cardEffect, difficult);
 
         if (card.isProjectWeek()) projectWeekAnxiety();
     }
 
-    private void applyCardEfect(HashMap<Stat, Boolean> cardEffect, int difficult) {
+    private void applyCardEffect(HashMap<Stat, Boolean> cardEffect, int difficult) {
         for (Stat stat: cardEffect.keySet()) {
             if (cardEffect.get(stat)) increaseStat(stat, difficult);
             if (!cardEffect.get(stat)) decreaseStat(stat, difficult);
