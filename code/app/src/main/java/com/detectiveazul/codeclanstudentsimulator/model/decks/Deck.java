@@ -52,6 +52,21 @@ public abstract class Deck {
         }
     }
 
+    public void createProjectWeek() {
+        for (int i = calculateBeginOfProjectWeek(); i < calculateEndOfProjectWeek() ; i++) {
+            replaceWithProjectWeekCards(i, cards.get(i).card());
+        }
+    }
+
+    private int calculateBeginOfProjectWeek() {
+        if (cards.size() <= 5) return 0;
+        return cards.size() - 6;
+    }
+
+    private int calculateEndOfProjectWeek() {
+        return cards.size();
+    }
+
     public void replaceWithProjectWeekCards(int index, CardCollection card) {
         cards.set(index, new ProjectWeekCard(card));
     }

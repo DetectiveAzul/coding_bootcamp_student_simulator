@@ -1,6 +1,8 @@
 package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
 public enum CardCollection {
+
+    //Test cards
     TEST(-1, "A beer" , "A friend want a beer", "Yes, please", "I should study...", Difficult.EASY,
             new StatEffect[] {StatEffect.ANXIETY_POSITIVE, StatEffect.SOCIAL_POSITIVE, StatEffect.MONEY_NEGATIVE},
             new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE}),
@@ -9,7 +11,16 @@ public enum CardCollection {
             new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE}),
     TEST3(-2, "A coke" , "A friend want a coke", "Yes, please", "I should study...", Difficult.EASY,
             new StatEffect[] {StatEffect.ANXIETY_POSITIVE, StatEffect.SOCIAL_POSITIVE, StatEffect.MONEY_NEGATIVE},
+            new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE}),
+    PRIZE_TEST(0, "A cookie" , "You finished Module1, have a cookie!", "Yes, please", "Omg", Difficult.EASY,
+            new StatEffect[] {StatEffect.ANXIETY_POSITIVE, StatEffect.SOCIAL_POSITIVE, StatEffect.MONEY_NEGATIVE},
             new StatEffect[] {StatEffect.ANXIETY_NEGATIVE, StatEffect.SOCIAL_NEGATIVE, StatEffect.MONEY_POSITIVE});
+
+    //Module 1 cards
+
+    //Module 2 cards
+
+    //Module 3 cards
 
     private final int module;
     private final String name;

@@ -54,11 +54,20 @@ public class ModuleDeckTest {
         assertNull(card);
     }
 
+
+
     @Test
     public void canReplaceWithProjectWeekCard() {
         assertFalse(deck00.getCards().get(0).isProjectWeek());
         deck00.replaceWithProjectWeekCards(0, CardCollection.TEST);
         assertTrue(deck00.getCards().get(0).isProjectWeek());
+    }
+
+    @Test
+    public void canCreateProjectWeek() {
+        deck00.createProjectWeek();
+        assertTrue(deck00.getCards().get(0).isProjectWeek());
+        assertTrue(deck00.getCards().get(1).isProjectWeek());
     }
 
 
