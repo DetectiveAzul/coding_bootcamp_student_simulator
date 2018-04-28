@@ -1,7 +1,6 @@
 package com.detectiveazul.codeclanstudentsimulator;
 
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
-import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.ModuleDeck;
 
 import org.junit.Before;
@@ -14,7 +13,6 @@ import static org.junit.Assert.assertNull;
 public class ModuleDeckTest {
     private ModuleDeck deck00;
     private ModuleDeck deck01;
-    private ModuleDeck deck02;
 
     @Before
     public void setup() {
