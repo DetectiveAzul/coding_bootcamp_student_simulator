@@ -125,11 +125,8 @@ public class Game {
 
 
     //Increase&Decrease Player Score
-    public void increasePlayerScore() {
-
+    public void increasePlayerScore(int quantity) {
+        player.increaseScore(quantity);
     }
 
-    public void decreasePlayerScore() {
-        
-    }
 }

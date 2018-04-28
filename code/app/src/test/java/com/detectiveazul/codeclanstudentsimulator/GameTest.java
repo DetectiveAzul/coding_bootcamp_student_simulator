@@ -119,4 +119,10 @@ public class GameTest {
         game.removeFirstDeck();
         assertEquals(1, game.getDecks().size());
     }
+
+    @Test
+    public void canIncreaseScore() {
+        game.increasePlayerScore(100);
+        assertEquals(100, game.getPlayer().getScore());
+    }
 }
