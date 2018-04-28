@@ -4,6 +4,7 @@ import com.detectiveazul.codeclanstudentsimulator.model.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.ProjectWeekCard;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,10 +17,12 @@ import static junit.framework.Assert.assertTrue;
 
 public class CardTest {
     private Card card00;
+    private ProjectWeekCard card01;
 
     @Before
     public void setup() {
         card00 = new Card(CardCollection.TEST );
+        card01 = new ProjectWeekCard(CardCollection.TEST);
 
     }
 
@@ -47,7 +50,7 @@ public class CardTest {
 
     @Test
     public void hasDifficult() {
-        assertEquals(Difficult.EASY, card00.getDifficult());
+        assertEquals(10, card00.getDifficult());
     }
     @Test
     public void isPrizeCard() {
@@ -67,5 +70,15 @@ public class CardTest {
     @Test
     public void hasSecondaryEffect() {
         assertFalse(card00.getSecondaryEffect().get(Stat.ANXIETY));
+    }
+
+    @Test
+    public void isNotProjectWeek() {
+        assertFalse(card00.isProjectWeek());
+    }
+
+    @Test
+    public void isProjectWeek() {
+        assertTrue(card01.isProjectWeek());
     }
 }
