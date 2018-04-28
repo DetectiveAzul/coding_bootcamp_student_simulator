@@ -6,53 +6,43 @@ import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
 import java.util.HashMap;
 
 public class Card {
-
-    private String name;
-    private int module;
-    private String description;
-    private String primaryOption;
-    private String secondaryOption;
-    private Difficult difficult;
+    private CardCollection card;
     private boolean prize;
     private HashMap<Stat, Boolean> primaryEffect;
     private HashMap<Stat, Boolean> secondaryEffect;
 
-    public Card(String name, int module, String description, String primaryOption, String secondaryOption,
-                Difficult difficult, boolean prize, HashMap<Stat, Boolean> primaryEffect,
-                HashMap<Stat, Boolean> secondaryEffect) {
-        this.name = name;
-        this.module = module;
-        this.description = description;
-        this.primaryOption = primaryOption;
-        this.secondaryOption = secondaryOption;
-        this.difficult = difficult;
-        this.prize = prize;
+    public Card(CardCollection card, HashMap<Stat, Boolean> primaryEffect, HashMap<Stat, Boolean> secondaryEffect) {
+        this.card = card;
+        this.prize = false;
         this.primaryEffect = primaryEffect;
         this.secondaryEffect = secondaryEffect;
     }
 
+    private CardCollection card() {
+        return card;
+    }
     public String getName() {
-        return name;
+        return card().getName();
     }
 
     public int getModule() {
-        return module;
+        return card().getModule();
     }
 
     public String getDescription() {
-        return description;
+        return card().getDescription();
     }
 
     public String getPrimaryOption() {
-        return primaryOption;
+        return card().getPrimaryOption();
     }
 
     public String getSecondaryOption() {
-        return secondaryOption;
+        return card().getSecondaryOption();
     }
 
     public Difficult getDifficult() {
-        return difficult;
+        return card().getDifficult();
     }
 
     public boolean isPrize() {
