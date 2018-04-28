@@ -1,6 +1,4 @@
-package com.detectiveazul.codeclanstudentsimulator.model.Constants;
-
-import com.detectiveazul.codeclanstudentsimulator.R;
+package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
 public enum Difficult {
     NEUTRAL("Neutral", 0),

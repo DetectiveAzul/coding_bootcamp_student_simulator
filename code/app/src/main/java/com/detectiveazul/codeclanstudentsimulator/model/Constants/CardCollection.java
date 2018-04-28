@@ -1,11 +1,4 @@
-package com.detectiveazul.codeclanstudentsimulator.model.Constants;
-
-import android.graphics.Bitmap;
-
-import com.detectiveazul.codeclanstudentsimulator.R;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
-
-import java.lang.reflect.Array;
+package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
 public enum CardCollection {
     TEST(1, "A beer" , "A friend want a beer", "Yes, please", "I should study...", Difficult.EASY,

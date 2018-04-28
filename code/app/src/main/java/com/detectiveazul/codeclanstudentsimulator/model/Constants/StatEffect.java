@@ -1,4 +1,4 @@
-package com.detectiveazul.codeclanstudentsimulator.model.Constants;
+package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
 public enum  StatEffect {
     MONEY_POSITIVE(Stat.MONEY, true),

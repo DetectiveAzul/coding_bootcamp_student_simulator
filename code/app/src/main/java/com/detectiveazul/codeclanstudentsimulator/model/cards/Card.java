@@ -1,9 +1,8 @@
-package com.detectiveazul.codeclanstudentsimulator.model;
+package com.detectiveazul.codeclanstudentsimulator.model.cards;
 
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.CardCollection;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.StatEffect;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.StatEffect;
 
 import java.util.HashMap;
 

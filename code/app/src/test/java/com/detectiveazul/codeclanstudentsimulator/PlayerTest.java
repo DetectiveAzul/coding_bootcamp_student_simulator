@@ -1,12 +1,12 @@
 package com.detectiveazul.codeclanstudentsimulator;
 
-import com.detectiveazul.codeclanstudentsimulator.model.Card;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.CardCollection;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.NeutralCard;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.PrizeCard;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
-import com.detectiveazul.codeclanstudentsimulator.model.Player;
-import com.detectiveazul.codeclanstudentsimulator.model.ProjectWeekCard;
+import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
+import com.detectiveazul.codeclanstudentsimulator.model.cards.NeutralCard;
+import com.detectiveazul.codeclanstudentsimulator.model.cards.PrizeCard;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
+import com.detectiveazul.codeclanstudentsimulator.model.cards.ProjectWeekCard;
 
 import org.junit.Before;
 import org.junit.Test;

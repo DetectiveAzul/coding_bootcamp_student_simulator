@@ -1,6 +1,7 @@
-package com.detectiveazul.codeclanstudentsimulator.model;
+package com.detectiveazul.codeclanstudentsimulator.model.player;
 
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 
 import java.util.HashMap;
 

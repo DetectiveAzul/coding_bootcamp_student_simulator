@@ -1,7 +1,7 @@
 package com.detectiveazul.codeclanstudentsimulator;
 
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.StatEffect;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.StatEffect;
 
 import org.junit.Test;
 

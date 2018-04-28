@@ -1,7 +1,6 @@
 package com.detectiveazul.codeclanstudentsimulator;
 
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
-import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Difficult;
 
 import org.junit.Test;
 
