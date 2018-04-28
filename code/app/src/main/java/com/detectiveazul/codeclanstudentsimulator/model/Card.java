@@ -62,4 +62,12 @@ public class Card {
     public void setPrize(boolean prize) {
         this.prize = prize;
     }
+
+    public HashMap<Stat, Boolean> getPrimaryEffect() {
+        return primaryEffect;
+    }
+
+    public HashMap<Stat, Boolean> getSecondaryEffect() {
+        return secondaryEffect;
+    }
 }

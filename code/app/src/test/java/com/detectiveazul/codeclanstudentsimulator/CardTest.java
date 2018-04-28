@@ -24,9 +24,9 @@ public class CardTest {
         card00priEffect.put(Stat.ANXIETY, false);
 
         HashMap<Stat, Boolean> card00secEffect = new HashMap<>();
-        card00priEffect.put(Stat.SOCIAL_LIFE, false);
-        card00priEffect.put(Stat.MONEY, true);
-        card00priEffect.put(Stat.ANXIETY, true);
+        card00secEffect.put(Stat.SOCIAL_LIFE, false);
+        card00secEffect.put(Stat.MONEY, true);
+        card00secEffect.put(Stat.ANXIETY, true);
 
         card00 = new Card("A beer", 1, "A friend want a beer",
                 "Yes, please", "I should study...", Difficult.EASY,
@@ -68,5 +68,15 @@ public class CardTest {
     public void canSetPrize() {
         card00.setPrize(true);
         assertTrue(card00.isPrize());
+    }
+
+    @Test
+    public void hasPrimaryEffect() {
+        assertFalse(card00.getPrimaryEffect().get(Stat.ANXIETY));
+    }
+
+    @Test
+    public void hasSecondaryEffect() {
+        assertTrue(card00.getSecondaryEffect().get(Stat.ANXIETY));
     }
 }
