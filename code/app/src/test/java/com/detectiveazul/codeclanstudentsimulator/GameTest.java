@@ -1,11 +1,14 @@
 package com.detectiveazul.codeclanstudentsimulator;
 
+import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertNull;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -54,5 +57,22 @@ public class GameTest {
     public void canFinishGame() {
         game.finishGame();
         assertTrue(game.isGameFinished());
+    }
+
+    @Test
+    public void canCheckIfWon() {
+        game.getDecks().clear();
+        assertEquals(GameStatus.WIN, game.checkGameCondition());
+    }
+
+    @Test
+    public void canCheckIfLost() {
+        game.getPlayer().increaseStat(Stat.ANXIETY, 100);
+        assertEquals(GameStatus.LOSE, game.checkGameCondition());
+    }
+
+    @Test
+    public void neitherWinOrLose() {
+        assertNull(game.checkGameCondition());
     }
 }

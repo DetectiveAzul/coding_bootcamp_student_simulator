@@ -42,6 +42,26 @@ public class Player {
         stats.put(stat, actualValue - amount);
     }
 
+    public boolean checkStatus() {
+        for (Stat stat:
+             stats.keySet()) {
+            if (checkMaxStat(stat)) return true;
+            if (checkMinStat(stat)) return true;
+        }
+        return false;
+    }
+
+    private boolean checkMaxStat(Stat stat) {
+        if (stats.get(stat) > 100) return true;
+        return false;
+    }
+
+    private boolean checkMinStat(Stat stat) {
+        if (stats.get(stat) < 0) return true;
+        return false;
+
+    }
+
     public int getScore() {
         return score;
     }

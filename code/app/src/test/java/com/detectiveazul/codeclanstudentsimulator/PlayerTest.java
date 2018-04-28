@@ -12,6 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class PlayerTest {
     private Player player;
@@ -112,5 +114,23 @@ public class PlayerTest {
         assertEquals( 50 ,player.getStat(Stat.ANXIETY));
         assertEquals( 50,player.getStat(Stat.MONEY));
         assertEquals( 50,player.getStat(Stat.SOCIAL_LIFE));
+    }
+
+    @Test
+    public void playerCanReturnIfLosesOver100() {
+        player.increaseStat(Stat.ANXIETY, 51);
+        assertTrue(player.checkStatus());
+    }
+
+    @Test
+    public void playerCanReturnIfLosesBelow0() {
+        player.decreaseStat(Stat.ANXIETY, 51);
+        assertTrue(player.checkStatus());
+    }
+
+    @Test
+    public void playerCanReturnIfNotLoses() {
+        player.decreaseStat(Stat.ANXIETY, 10);
+        assertFalse(player.checkStatus());
     }
 }

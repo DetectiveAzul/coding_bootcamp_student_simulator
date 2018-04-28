@@ -1,6 +1,7 @@
 package com.detectiveazul.codeclanstudentsimulator.model.game;
 
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.ModuleDeck;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
@@ -68,16 +69,27 @@ public class Game {
     }
 
     //This is the test to check if game has been won or has been lost
-    public void checkGameCondition() {
-
+    public GameStatus checkGameCondition() {
+        if (gameLost()) return GameStatus.LOSE;
+        if (gameWon()) return GameStatus.WIN;
+        return null;
     }
 
-    public void gameWon() {
-
+    private boolean gameWon() {
+        if (decks.size() == 0) {
+            finishGame();
+            return true;
+        }
+        return false;
     }
 
-    public void gameLost() {
+    private boolean gameLost() {
+        if (player.checkStatus()) {
+            finishGame();
+            return true;
+        }
 
+        return false;
     }
 
     //Methods to handle turns
@@ -90,11 +102,11 @@ public class Game {
     }
 
     //Player actions
-    public void playerTakeFirstOption {
+    public void playerTakeFirstOption() {
 
     }
 
-    public void playerTakeSecondOption {
+    public void playerTakeSecondOption() {
 
     }
 
