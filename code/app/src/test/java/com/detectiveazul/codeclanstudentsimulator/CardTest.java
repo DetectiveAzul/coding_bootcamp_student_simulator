@@ -19,17 +19,7 @@ public class CardTest {
 
     @Before
     public void setup() {
-        HashMap<Stat, Boolean> card00priEffect = new HashMap<>();
-        card00priEffect.put(Stat.SOCIAL_LIFE, true);
-        card00priEffect.put(Stat.MONEY, false);
-        card00priEffect.put(Stat.ANXIETY, false);
-
-        HashMap<Stat, Boolean> card00secEffect = new HashMap<>();
-        card00secEffect.put(Stat.SOCIAL_LIFE, false);
-        card00secEffect.put(Stat.MONEY, true);
-        card00secEffect.put(Stat.ANXIETY, true);
-
-        card00 = new Card(CardCollection.TEST, card00priEffect, card00secEffect );
+        card00 = new Card(CardCollection.TEST );
 
     }
 
@@ -71,11 +61,11 @@ public class CardTest {
 
     @Test
     public void hasPrimaryEffect() {
-        assertFalse(card00.getPrimaryEffect().get(Stat.ANXIETY));
+        assertTrue(card00.getPrimaryEffect().get(Stat.ANXIETY));
     }
 
     @Test
     public void hasSecondaryEffect() {
-        assertTrue(card00.getSecondaryEffect().get(Stat.ANXIETY));
+        assertFalse(card00.getSecondaryEffect().get(Stat.ANXIETY));
     }
 }

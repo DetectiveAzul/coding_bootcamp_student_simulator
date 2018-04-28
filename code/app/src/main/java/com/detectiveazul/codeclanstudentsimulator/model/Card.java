@@ -3,6 +3,7 @@ package com.detectiveazul.codeclanstudentsimulator.model;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
+import com.detectiveazul.codeclanstudentsimulator.model.Constants.StatEffect;
 
 import java.util.HashMap;
 
@@ -12,11 +13,12 @@ public class Card {
     private HashMap<Stat, Boolean> primaryEffect;
     private HashMap<Stat, Boolean> secondaryEffect;
 
-    public Card(CardCollection card, HashMap<Stat, Boolean> primaryEffect, HashMap<Stat, Boolean> secondaryEffect) {
+    public Card(CardCollection card) {
         this.card = card;
         this.prize = false;
-        this.primaryEffect = primaryEffect;
-        this.secondaryEffect = secondaryEffect;
+        this.primaryEffect = new HashMap<>();
+        this.secondaryEffect = new HashMap<>();
+        setEffects();
     }
 
     private CardCollection card() {
@@ -61,4 +63,22 @@ public class Card {
     public HashMap<Stat, Boolean> getSecondaryEffect() {
         return secondaryEffect;
     }
+
+    private void setEffects() {
+        setPrimaryEffect();
+        setSecondaryEffect();
+    }
+
+    private void setPrimaryEffect() {
+        for (StatEffect combination: card.getPrimaryEffect()) {
+            this.primaryEffect.put(combination.getStat(), combination.isPositiveEffect());
+        }
+    }
+
+    private void setSecondaryEffect() {
+        for (StatEffect combination: card.getSecondaryEffect()) {
+            this.secondaryEffect.put(combination.getStat(), combination.isPositiveEffect());
+        }
+    }
+
 }
