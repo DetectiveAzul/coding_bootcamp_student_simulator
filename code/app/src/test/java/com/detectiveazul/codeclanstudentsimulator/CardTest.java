@@ -35,7 +35,7 @@ public class CardTest {
     }
     @Test
     public void hasModule() {
-        assertEquals(1, card00.getModule());
+        assertEquals(-1, card00.getModule());
     }
     @Test
     public void hasDescription() {

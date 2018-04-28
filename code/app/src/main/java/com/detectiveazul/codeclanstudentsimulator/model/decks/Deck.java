@@ -1,6 +1,7 @@
 package com.detectiveazul.codeclanstudentsimulator.model.decks;
 
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.cards.ProjectWeekCard;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public abstract class Deck {
         this.module = module;
         this.size = size;
         cards = new ArrayList<>();
+        populateDeck();
     }
 
     public int getModule() {
@@ -33,12 +35,25 @@ public abstract class Deck {
         return cards.size();
     }
 
+    protected ArrayList<CardCollection> getCardCollection() {
+        ArrayList<CardCollection> cardCollection = new ArrayList<>();
+        for (CardCollection card:CardCollection.values()) {
+            cardCollection.add(card);
+        }
+        Collections.shuffle(cardCollection);
+        return cardCollection;
+    }
+
     public void populateDeck() {
-        for (CardCollection card: CardCollection.values() ) {
+        for (CardCollection card: getCardCollection() ) {
             if (card.getModule() == this.module && cards.size() < this.size ) {
               cards.add(createCard(card));
             }
         }
+    }
+
+    public void replaceWithProjectWeekCards(int index, CardCollection card) {
+        cards.set(index, new ProjectWeekCard(card));
     }
 
     private Card createCard(CardCollection card) {
@@ -58,5 +73,7 @@ public abstract class Deck {
 
         return card;
     }
+
+
 
 }
