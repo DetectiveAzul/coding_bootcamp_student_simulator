@@ -1,5 +1,6 @@
 package com.detectiveazul.codeclanstudentsimulator.model;
 
+import com.detectiveazul.codeclanstudentsimulator.model.Constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Difficult;
 import com.detectiveazul.codeclanstudentsimulator.model.Constants.Stat;
 
