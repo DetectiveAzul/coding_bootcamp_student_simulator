@@ -4,10 +4,11 @@ import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.ProjectWeekCard;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public abstract class Deck {
+public abstract class Deck implements Serializable {
     private int module;
     private ArrayList<Card> cards;
     private int size;

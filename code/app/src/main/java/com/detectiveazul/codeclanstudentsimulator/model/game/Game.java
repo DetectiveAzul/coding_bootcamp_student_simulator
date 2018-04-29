@@ -6,9 +6,10 @@ import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.ModuleDeck;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Game {
+public class Game implements Serializable {
     private Player player;
     private ArrayList<Card> deck;
     private Card currentCard;

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">CodeclanStudentSimulator</string>
+    <!-- Menu buttons -->
+    <string name="menu_start">Start Menu</string>
+    <string name="menu_log">Previous Students</string>
+    <string name="menu_about">About the Game</string>
+    <string name="menu_exit">Exit Game</string>
+    <!-- Menu toasts -->
+    <string name="toast_menu_start">Start Menu</string>
+    <string name="toast_menu_log">Previous Students</string>
+    <string name="toast_menu_about">About the Game</string>
+    <string name="toast_menu_exit">Exit Game</string>
+    <!-- Start Screen buttons -->
+    <string name="new_game">New Game</string>
+    <string name="load_game">Load Game</string>
+    <string name="ranking">Ranking</string>
 </resources>

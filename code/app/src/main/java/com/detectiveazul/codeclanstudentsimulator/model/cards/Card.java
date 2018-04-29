@@ -4,9 +4,10 @@ import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.StatEffect;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Card {
+public class Card implements Serializable {
     private CardCollection card;
     private boolean prize;
     private boolean projectWeek;

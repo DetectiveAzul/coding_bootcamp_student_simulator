@@ -3,9 +3,10 @@ package com.detectiveazul.codeclanstudentsimulator.model.player;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Player {
+public class Player implements Serializable {
     private String name;
     private HashMap<Stat, Integer> stats;
     private int score;
