@@ -10,32 +10,41 @@ import java.util.ArrayList;
 
 public class Game {
     private Player player;
-    private ArrayList<Deck> decks;
+    private ArrayList<Card> deck;
+    private Card currentCard;
     private int[] currentTime;
     private boolean gameFinished;
 
     public Game(Player player) {
         this.player = player;
-        this.decks = new ArrayList<>();
+        this.deck = new ArrayList<>();
         this.currentTime = new int[] {1,1};
         this.gameFinished = false;
         buildGameDeck();
     }
 
     private void buildGameDeck() {
-        this.decks.add(new ModuleDeck(1));
-        //Space for adding a Prize card
-        this.decks.add(new ModuleDeck(2));
-        //Space for adding a Prize card
-        this.decks.add(new ModuleDeck(3));
+        for (int i = 1; i <= 3 ; i++) {
+         this.deck.addAll(buildDeck(i).getCards());
+        }
+    }
+
+    private ModuleDeck buildDeck(int module) {
+        ModuleDeck deck = new ModuleDeck(module);
+        deck.shuffleDeck();
+        return deck;
     }
 
     public Player getPlayer() {
         return player;
     }
 
-    public ArrayList<Deck> getDecks() {
-        return decks;
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
+
+    public Card getCurrentCard() {
+        return currentCard;
     }
 
     public int[] getCurrentTime() {
@@ -76,7 +85,7 @@ public class Game {
     }
 
     private boolean gameWon() {
-        if (decks.size() == 0) {
+        if (deck.size() == 0) {
             finishGame();
             return true;
         }
@@ -94,27 +103,23 @@ public class Game {
 
     //Methods to handle turns
     public void turnBegins() {
-
+        drawCard();
     }
 
     public void turnEnds() {
-
+        this.currentCard = null;
     }
 
-    //Methods to handle decks
+    //Methods to handle deck
     public Card drawCard() {
-        Card card = null;
-       if (checkFirstDeckEmpty()) card = decks.get(0).drawCard();
-       return card;
+       if (!checkDeckEmpty()) this.currentCard = deck.remove(0);
+       return currentCard;
     }
 
-    public boolean checkFirstDeckEmpty() {
-        return (decks.get(0).getNumberOfCards() == 0);
+    public boolean checkDeckEmpty() {
+        return deck.isEmpty();
     }
 
-    public void removeFirstDeck() {
-        decks.remove(0);
-    }
 
     //Player actions
     public void playerTakeFirstOption(Card card) {

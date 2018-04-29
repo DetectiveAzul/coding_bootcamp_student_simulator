@@ -34,8 +34,8 @@ public class GameTest {
     }
 
     @Test
-    public void hasDecks() {
-        assertEquals(3, game.getDecks().size());
+    public void hasDeck() {
+        assertEquals(0, game.getDeck().size());
     }
 
     @Test
@@ -68,7 +68,7 @@ public class GameTest {
 
     @Test
     public void canCheckIfWon() {
-        game.getDecks().clear();
+        game.getDeck().clear();
         assertEquals(GameStatus.WIN, game.checkGameCondition());
     }
 
@@ -80,6 +80,7 @@ public class GameTest {
 
     @Test
     public void neitherWinOrLose() {
+        game.getDeck().add(new Card(CardCollection.TEST));
         assertNull(game.checkGameCondition());
     }
 
@@ -113,12 +114,6 @@ public class GameTest {
 //        game.getDecks().get(0).drawCard();
 //        assertTrue(game.checkFirstDeckEmpty());
 //    }
-    @Test
-    public void canRemoveDeck() {
-        game.removeFirstDeck();
-        game.removeFirstDeck();
-        assertEquals(1, game.getDecks().size());
-    }
 
     @Test
     public void canIncreaseScore() {
@@ -130,5 +125,19 @@ public class GameTest {
     public void canDrawCard() {
         Card card = game.drawCard();
         assertNull(card);
+    }
+
+    @Test
+    public void canBeginTurn() {
+        game.getDeck().add(new Card(CardCollection.TEST));
+        game.turnBegins();
+        assertEquals(CardCollection.TEST, game.getCurrentCard().card());
+    }
+    @Test
+    public void canEndTurn() {
+        game.getDeck().add(new Card(CardCollection.TEST));
+        game.turnBegins();
+        game.turnEnds();
+        assertNull(game.getCurrentCard());
     }
 }
