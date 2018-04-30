@@ -6,9 +6,13 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
@@ -67,6 +71,7 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    //VIEW REFRESHERS
     private void refreshView() {
         refreshStatsView();
         refreshTimeView();
@@ -106,6 +111,7 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    //Player Options to Select
     public void onFirstOptionSelected(View view) {
         game.playerTakeFirstOption(game.getCurrentCard());
         gameLoop();
@@ -116,6 +122,7 @@ public class GameActivity extends AppCompatActivity {
         gameLoop();
     }
 
+    //Game Loop
     private void gameLoop() {
         game.turnEnds();
         if (game.checkGameCondition() != GameStatus.IN_PROGRESS) {
@@ -140,6 +147,7 @@ public class GameActivity extends AppCompatActivity {
         refreshView();
     }
 
+    //Loading and Saving game
     private void saveGame(Game game) {
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -162,5 +170,36 @@ public class GameActivity extends AppCompatActivity {
         editor.putString("saved game", "{}");
         editor.apply();
     }
+
+
+    //Menu handling
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_game_menu, menu);
+        return true;
+    }
+
+    //Menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_diary) {
+            Toast.makeText(GameActivity.this, R.string.menu_diary,
+                    Toast.LENGTH_SHORT).show();
+
+            return true;
+        }
+        if (item.getItemId() == R.id.action_about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if (item.getItemId() == R.id.action_exit) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
 }
