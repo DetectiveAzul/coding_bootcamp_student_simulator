@@ -15,5 +15,6 @@
     <string name="load_game">Load Game</string>
     <string name="ranking">Ranking</string>
     <!-- Game Activity strings -->
-    <string name="game_title_bar">\'s Journey</string>
+    <string name="title_bar_week">Week\ </string>
+    <string name="title_bar_day">\ \ Day\ </string>
 </resources>

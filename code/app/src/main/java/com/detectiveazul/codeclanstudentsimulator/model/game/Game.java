@@ -25,18 +25,21 @@ public class Game implements Serializable {
         buildGameDeck();
     }
 
+    //It builds the gameDeck by creating three moduleDecks
+
     private void buildGameDeck() {
         for (int i = 1; i <= 3 ; i++) {
          this.deck.getCards().addAll(buildDeck(i).getCards());
         }
     }
 
+    //Build a deck and shuffle it before putting it into the GameDeck
     private ModuleDeck buildDeck(int module) {
         ModuleDeck deck = new ModuleDeck(module);
-        deck.shuffleDeck();
         return deck;
     }
 
+    //Getters/setters
     public Player getPlayer() {
         return player;
     }
@@ -51,6 +54,14 @@ public class Game implements Serializable {
 
     public int[] getCurrentTime() {
         return currentTime;
+    }
+
+    public int getDay() {
+        return currentTime[0];
+    }
+
+    public int getWeek() {
+        return currentTime[1];
     }
 
     public void timePass() {

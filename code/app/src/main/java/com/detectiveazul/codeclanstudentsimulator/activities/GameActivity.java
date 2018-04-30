@@ -13,8 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.detectiveazul.codeclanstudentsimulator.EndGameActivity;
 import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
@@ -27,22 +29,38 @@ public class GameActivity extends AppCompatActivity {
     private Game game;
     private Player player;
     private Deck deck;
-    //Stats bars
+    //Player view
+    private TextView playerNameTextView;
     private ProgressBar anxietyBar;
     private ProgressBar sleepBar;
     private ProgressBar socialLifeBar;
     private ProgressBar moneyBar;
+    //Card text
+    private TextView cardNameTextView;
+    private TextView cardProjectCardTextView;
+    private TextView cardDescriptionTextView;
+    private TextView cardFirstOptionTextView;
+    private TextView cardSecondOptionTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        //Initialize views
+        //Initialize player views
+        playerNameTextView = findViewById(R.id.playerNameId);
         anxietyBar = findViewById(R.id.anxietyBarId);
         sleepBar = findViewById(R.id.sleepBarId);
         socialLifeBar = findViewById(R.id.socialLifeBarId);
         moneyBar = findViewById(R.id.moneyBarId);
+
+        //Initialize card views
+        cardNameTextView = findViewById(R.id.cardNameTextViewId);
+        cardProjectCardTextView = findViewById(R.id.cardProjectTextViewId);
+        cardDescriptionTextView = findViewById(R.id.cardDescriptionTextViewId);
+        cardFirstOptionTextView = findViewById(R.id.cardFirstOptionTextViewId);
+        cardSecondOptionTextView = findViewById(R.id.cardSecondOptionTextViewId);
 
         //Get game variables from intent
         Intent intent = getIntent();
@@ -50,24 +68,45 @@ public class GameActivity extends AppCompatActivity {
         player = game.getPlayer();
         deck = game.getDeck();
 
-        //Change title to player's name
-        String title = getString(R.string.game_title_bar);
-        changeTitleOfActivity(player.getName() + title);
+        //Initiate first Turn
+        game.turnBegins();
 
-        //Refresh the screen with the beginning of the game
-        refresh();
+        //Refresh the screen with the beginning of the game information
+        refreshView();
 
     }
 
-    private void refresh() {
-        refreshStats();
+    private void refreshView() {
+        refreshStatsView();
+        refreshTimeView();
+        refreshCardView();
     }
 
-    private void refreshStats() {
+    private void refreshCardView() {
+        Card card = game.getCurrentCard();
+        cardNameTextView.setText(card.getName());
+        if (!card.isProjectWeek()) { cardProjectCardTextView.setVisibility(View.INVISIBLE);
+        } else {
+            cardProjectCardTextView.setVisibility(View.VISIBLE); }
+        cardDescriptionTextView.setText(card.getDescription());
+        cardFirstOptionTextView.setText(card.getPrimaryOption());
+        cardSecondOptionTextView.setText(card.getSecondaryOption());
+    }
+
+    private void refreshStatsView() {
+        playerNameTextView.setText(player.getName());
         anxietyBar.setProgress(player.getStat(Stat.ANXIETY));
         sleepBar.setProgress(player.getStat(Stat.SLEEP));
         moneyBar.setProgress(player.getStat(Stat.MONEY));
         socialLifeBar.setProgress(player.getStat(Stat.SOCIAL_LIFE));
+    }
+
+    private void refreshTimeView() {
+        String week = getString(R.string.title_bar_week);
+        String day = getString(R.string.title_bar_day);
+        int weekNumber = game.getWeek();
+        int dayNumber = game.getDay();
+        changeTitleOfActivity(week + weekNumber + day + dayNumber);
 
     }
 
@@ -75,6 +114,29 @@ public class GameActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(string);
 
     }
+
+    public void onFirstOptionSelected(View view) {
+        game.playerTakeFirstOption(game.getCurrentCard());
+        gameLoop();
+    }
+
+    public void onSecondOptionSelected(View view) {
+        game.playerTakeSecondOption(game.getCurrentCard());
+        gameLoop();
+    }
+
+    private void gameLoop() {
+        game.turnEnds();
+        if (game.checkGameCondition() != GameStatus.IN_PROGRESS) {
+            Intent intent = new Intent(this, EndGameActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            game.turnBegins();
+            refreshView();
+        }
+    }
+
 
 
 //    //Menu
