@@ -8,6 +8,7 @@ public class NeutralCard extends Card {
         super(card);
     }
 
+    //Override the method to return always 0, making no-effect in the player
     public int getDifficult() {
         return 0;
     }

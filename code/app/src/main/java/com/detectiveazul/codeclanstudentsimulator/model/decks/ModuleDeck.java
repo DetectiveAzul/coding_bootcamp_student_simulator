@@ -5,4 +5,5 @@ public class ModuleDeck extends Deck {
         super(module, 20);
     }
 
+    //A special kind of Deck that already has a size (20) and only asks for the module variable
 }

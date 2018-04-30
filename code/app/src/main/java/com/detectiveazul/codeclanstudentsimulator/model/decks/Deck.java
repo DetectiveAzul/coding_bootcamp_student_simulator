@@ -20,6 +20,8 @@ public abstract class Deck implements Serializable {
         populateDeck();
     }
 
+    //Basic getter/setter
+
     public int getModule() {
         return module;
     }
@@ -36,7 +38,9 @@ public abstract class Deck implements Serializable {
         return cards.size();
     }
 
-    protected ArrayList<CardCollection> getCardCollection() {
+
+    //Return the whole set of cards on the CollectionCard enum, but shuffled
+    private ArrayList<CardCollection> getCardCollection() {
         ArrayList<CardCollection> cardCollection = new ArrayList<>();
         for (CardCollection card:CardCollection.values()) {
             cardCollection.add(card);
@@ -45,7 +49,8 @@ public abstract class Deck implements Serializable {
         return cardCollection;
     }
 
-    public void populateDeck() {
+    //Populate the deck with cards of the Deck's Module, and stop the process when the size is met
+    private void populateDeck() {
         for (CardCollection card: getCardCollection() ) {
             if (card.getModule() == this.module && cards.size() < this.size ) {
               cards.add(createCard(card));
@@ -53,12 +58,14 @@ public abstract class Deck implements Serializable {
         }
     }
 
+    //Replace last 5 cards of the deck with a copy of them being ProjectWeekCards
     public void createProjectWeek() {
         for (int i = calculateBeginOfProjectWeek(); i < calculateEndOfProjectWeek() ; i++) {
             replaceWithProjectWeekCards(i, cards.get(i).card());
         }
     }
 
+    //Calculate begin and end of Project Week boundaries
     private int calculateBeginOfProjectWeek() {
         if (cards.size() <= 5) return 0;
         return cards.size() - 6;
@@ -68,18 +75,22 @@ public abstract class Deck implements Serializable {
         return cards.size();
     }
 
+    //Replace the card with a copy of a ProjectWeekCard
     public void replaceWithProjectWeekCards(int index, CardCollection card) {
         cards.set(index, new ProjectWeekCard(card));
     }
 
+    //Create a card
     private Card createCard(CardCollection card) {
         return new Card(card);
     }
 
+    //Shuffle the deck
     public void shuffleDeck() {
         Collections.shuffle(cards);
     }
 
+    //Return a card and remove it from the deck
     public Card drawCard() {
         Card card = null;
         if (getNumberOfCards() > 0)  {
@@ -89,7 +100,5 @@ public abstract class Deck implements Serializable {
 
         return card;
     }
-
-
 
 }

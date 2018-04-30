@@ -23,6 +23,8 @@ public class Card implements Serializable {
         setEffects();
     }
 
+    //Basic Getters will get the information from the Enum CardCollection
+
     public CardCollection card() {
         return card;
     }
@@ -74,6 +76,10 @@ public class Card implements Serializable {
     public HashMap<Stat, Boolean> getSecondaryEffect() {
         return secondaryEffect;
     }
+
+    //Run once during the creation of the card, it will take the array of StatEffect[] from the
+    //CardCollection Enum and create a hashmap with a Stat and a boolean to know if the effect
+    //is positive or not
 
     private void setEffects() {
         setPrimaryEffect();

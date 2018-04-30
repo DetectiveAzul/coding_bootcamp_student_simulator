@@ -9,5 +9,8 @@ public class ProjectWeekCard extends Card {
         setProjectWeek(true);
     }
 
+    //Project Week card are perceived by the player as more stressfull, so it auto-increases his
+    //anxiety
+
 
 }

@@ -23,6 +23,7 @@ public class PrizeCard extends Card {
         resetSecondaryEffect();
     }
 
+    //It reset the card effect so it balances the player, like a prize, after finishing a module
     private void resetPrimaryEffect() {
         resetEffect(getPrimaryEffect());
     }
