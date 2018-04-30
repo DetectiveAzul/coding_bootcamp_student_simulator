@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
@@ -17,10 +18,13 @@ import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 import com.google.gson.Gson;
 
+import org.w3c.dom.Text;
+
 public class StartMenuActivity extends AppCompatActivity {
     private Button newGameButton;
     private Button loadGameButton;
     private Button rankingButton;
+    private EditText newPlayerNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +34,15 @@ public class StartMenuActivity extends AppCompatActivity {
         newGameButton = findViewById(R.id.newGameButtonId);
         loadGameButton = findViewById(R.id.loadButtonId);
         rankingButton = findViewById(R.id.rankingButtonId);
+        newPlayerNameEditText = findViewById(R.id.newPlayerNameEditTextId);
 
+    }
+
+    private String getNewPlayerName() {
+        String name = newPlayerNameEditText.getText().toString();
+        if (name.length() < 1) return "Generic Student";
+        newPlayerNameEditText.setText("");
+        return name;
     }
 
     @Override
@@ -60,7 +72,7 @@ public class StartMenuActivity extends AppCompatActivity {
         //Delete previous game
         deleteGame();
         //Then create the game
-        Player player = new Player("Test Player");
+        Player player = new Player(getNewPlayerName());
         Game game = new Game(player);
         //Instantiate the first turn
         game.turnBegins();

@@ -18,6 +18,8 @@
     <string name="new_game">New Game</string>
     <string name="load_game">Load Game</string>
     <string name="ranking">Ranking</string>
+    <!-- Start Screen Strings -->
+    <string name="new_player">Introduce new student name</string>
     <!-- Game Activity strings -->
     <string name="title_bar_week">Week\ </string>
     <string name="title_bar_day">\ \ Day\ </string>
