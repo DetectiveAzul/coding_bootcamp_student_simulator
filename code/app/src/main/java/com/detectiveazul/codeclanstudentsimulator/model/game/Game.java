@@ -121,6 +121,7 @@ public class Game implements Serializable {
 
     public void turnEnds() {
         this.currentCard = null;
+        timePass();
     }
 
     //Methods to handle deck

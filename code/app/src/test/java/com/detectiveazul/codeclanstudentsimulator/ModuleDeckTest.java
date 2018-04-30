@@ -58,8 +58,6 @@ public class ModuleDeckTest {
 
     @Test
     public void canReplaceWithProjectWeekCard() {
-        assertFalse(deck00.getCards().get(0).isProjectWeek());
-        deck00.replaceWithProjectWeekCards(0, CardCollection.TEST);
         assertTrue(deck00.getCards().get(0).isProjectWeek());
     }
 

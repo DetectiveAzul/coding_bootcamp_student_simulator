@@ -12,6 +12,7 @@ import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -35,7 +36,7 @@ public class GameTest {
 
     @Test
     public void hasDeck() {
-        assertEquals(0, game.getDeck().getCards().size());
+        assertTrue(game.getDeck().getCards().size() >= 1);
     }
 
     @Test
@@ -124,11 +125,12 @@ public class GameTest {
     @Test
     public void canDrawCard() {
         Card card = game.drawCard();
-        assertNull(card);
+        assertNotNull(game.getCurrentCard());
     }
 
     @Test
     public void canBeginTurn() {
+        game.getDeck().getCards().clear();
         game.getDeck().getCards().add(new Card(CardCollection.TEST));
         game.turnBegins();
         assertEquals(CardCollection.TEST, game.getCurrentCard().card());
