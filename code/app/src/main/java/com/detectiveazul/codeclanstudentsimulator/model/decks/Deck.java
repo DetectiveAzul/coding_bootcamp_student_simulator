@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public abstract class Deck implements Serializable {
+public class Deck implements Serializable {
     private int module;
     private ArrayList<Card> cards;
     private int size;
@@ -17,7 +17,6 @@ public abstract class Deck implements Serializable {
         this.module = module;
         this.size = size;
         cards = new ArrayList<>();
-        populateDeck();
     }
 
     //Basic getter/setter
@@ -50,7 +49,7 @@ public abstract class Deck implements Serializable {
     }
 
     //Populate the deck with cards of the Deck's Module, and stop the process when the size is met
-    private void populateDeck() {
+    protected void populateDeck() {
         for (CardCollection card: getCardCollection() ) {
             if (card.getModule() == this.module && cards.size() < this.size ) {
               cards.add(createCard(card));

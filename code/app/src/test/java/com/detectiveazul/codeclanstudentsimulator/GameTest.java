@@ -35,7 +35,7 @@ public class GameTest {
 
     @Test
     public void hasDeck() {
-        assertEquals(0, game.getDeck().size());
+        assertEquals(0, game.getDeck().getCards().size());
     }
 
     @Test
@@ -68,7 +68,7 @@ public class GameTest {
 
     @Test
     public void canCheckIfWon() {
-        game.getDeck().clear();
+        game.getDeck().getCards().clear();
         assertEquals(GameStatus.WIN, game.checkGameCondition());
     }
 
@@ -80,7 +80,7 @@ public class GameTest {
 
     @Test
     public void neitherWinOrLose() {
-        game.getDeck().add(new Card(CardCollection.TEST));
+        game.getDeck().getCards().add(new Card(CardCollection.TEST));
         assertNull(game.checkGameCondition());
     }
 
@@ -129,13 +129,13 @@ public class GameTest {
 
     @Test
     public void canBeginTurn() {
-        game.getDeck().add(new Card(CardCollection.TEST));
+        game.getDeck().getCards().add(new Card(CardCollection.TEST));
         game.turnBegins();
         assertEquals(CardCollection.TEST, game.getCurrentCard().card());
     }
     @Test
     public void canEndTurn() {
-        game.getDeck().add(new Card(CardCollection.TEST));
+        game.getDeck().getCards().add(new Card(CardCollection.TEST));
         game.turnBegins();
         game.turnEnds();
         assertNull(game.getCurrentCard());

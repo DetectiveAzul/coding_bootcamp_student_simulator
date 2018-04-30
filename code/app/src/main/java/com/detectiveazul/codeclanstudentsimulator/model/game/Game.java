@@ -11,14 +11,14 @@ import java.util.ArrayList;
 
 public class Game implements Serializable {
     private Player player;
-    private ArrayList<Card> deck;
+    private Deck deck;
     private Card currentCard;
     private int[] currentTime;
     private boolean gameFinished;
 
     public Game(Player player) {
         this.player = player;
-        this.deck = new ArrayList<>();
+        this.deck = new Deck(0, 82);
         this.currentTime = new int[] {1,1};
         this.gameFinished = false;
         buildGameDeck();
@@ -26,7 +26,7 @@ public class Game implements Serializable {
 
     private void buildGameDeck() {
         for (int i = 1; i <= 3 ; i++) {
-         this.deck.addAll(buildDeck(i).getCards());
+         this.deck.getCards().addAll(buildDeck(i).getCards());
         }
     }
 
@@ -40,7 +40,7 @@ public class Game implements Serializable {
         return player;
     }
 
-    public ArrayList<Card> getDeck() {
+    public Deck getDeck() {
         return deck;
     }
 
@@ -86,7 +86,7 @@ public class Game implements Serializable {
     }
 
     private boolean gameWon() {
-        if (deck.size() == 0) {
+        if (deck.getNumberOfCards() == 0) {
             finishGame();
             return true;
         }
@@ -113,12 +113,12 @@ public class Game implements Serializable {
 
     //Methods to handle deck
     public Card drawCard() {
-       if (!checkDeckEmpty()) this.currentCard = deck.remove(0);
+       if (!checkDeckEmpty()) this.currentCard = deck.drawCard();
        return currentCard;
     }
 
     public boolean checkDeckEmpty() {
-        return deck.isEmpty();
+        return deck.getCards().isEmpty();
     }
 
 

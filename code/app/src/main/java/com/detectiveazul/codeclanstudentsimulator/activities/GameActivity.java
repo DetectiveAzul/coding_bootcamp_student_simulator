@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 
@@ -20,7 +21,7 @@ public class GameActivity extends AppCompatActivity {
     //Game variables
     private Game game;
     private Player player;
-    private ArrayList<Card> deck;
+    private Deck deck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
