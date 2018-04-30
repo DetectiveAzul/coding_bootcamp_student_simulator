@@ -1,6 +1,8 @@
 package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
-public enum GameStatus {
+import java.io.Serializable;
+
+public enum GameStatus implements Serializable {
     WIN,
     LOSE,
     IN_PROGRESS;

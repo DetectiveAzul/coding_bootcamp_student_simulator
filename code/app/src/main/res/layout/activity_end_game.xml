@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".activities.EndGameActivity">
 
+    <TextView
+        android:id="@+id/playerNameTextViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PlayerName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/resultTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Result"
+        app:layout_constraintStart_toEndOf="@+id/playerNameTextViewID"
+        tools:layout_editor_absoluteY="53dp" />
 </android.support.constraint.ConstraintLayout>

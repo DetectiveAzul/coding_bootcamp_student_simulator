@@ -6,10 +6,12 @@ import android.arch.persistence.room.PrimaryKey;
 
 @Entity
 public class Gamelog {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
+
     @ColumnInfo(name = "student_name")
     private String studentName;
+
     private String week;
     private String day;
     private String score;

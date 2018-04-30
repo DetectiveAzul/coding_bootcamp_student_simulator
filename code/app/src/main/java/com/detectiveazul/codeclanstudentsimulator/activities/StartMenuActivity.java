@@ -43,24 +43,12 @@ public class StartMenuActivity extends AppCompatActivity {
     //Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_menu) {
-            Toast.makeText(StartMenuActivity.this, R.string.toast_menu_start,
-                    Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        if (item.getItemId() == R.id.action_log) {
-            Toast.makeText(StartMenuActivity.this, R.string.toast_menu_log,
-                    Toast.LENGTH_SHORT).show();
-            return true;
-        }
         if (item.getItemId() == R.id.action_about) {
-            Toast.makeText(StartMenuActivity.this, R.string.toast_menu_about,
-                    Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
             return true;
         }
         if (item.getItemId() == R.id.action_exit) {
-            Toast.makeText(StartMenuActivity.this, R.string.toast_menu_exit,
-                    Toast.LENGTH_SHORT).show();
             finish();
             return true;
         }

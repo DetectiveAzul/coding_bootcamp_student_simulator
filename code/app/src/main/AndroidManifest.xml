@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activities.GameActivity" />
         <activity android:name=".activities.EndGameActivity" />
-        <activity android:name=".activities.RankingActivity"></activity>
+        <activity android:name=".activities.RankingActivity" />
+        <activity android:name=".activities.AboutActivity"></activity>
     </application>
 
 </manifest>

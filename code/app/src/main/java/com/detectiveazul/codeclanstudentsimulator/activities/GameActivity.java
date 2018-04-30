@@ -119,18 +119,25 @@ public class GameActivity extends AppCompatActivity {
     private void gameLoop() {
         game.turnEnds();
         if (game.checkGameCondition() != GameStatus.IN_PROGRESS) {
-            Intent intent = new Intent(this, EndGameActivity.class);
-            intent.putExtra("player", player);
-            intent.putExtra("gameStatus", game.checkGameCondition().toString());
-            startActivity(intent);
-            deleteGame();
-            finish();
+            finishGame();
         } else {
-            game.turnBegins();
-            saveGame(game);
-            Log.d("Game saved: ", game.getPlayer().getName());
-            refreshView();
+            newTurn();
         }
+    }
+
+    private void finishGame() {
+        Intent intent = new Intent(this, EndGameActivity.class);
+        intent.putExtra("game", game);
+        startActivity(intent);
+        deleteGame();
+        finish();
+    }
+
+    private void newTurn() {
+        game.turnBegins();
+        saveGame(game);
+        Log.d("Game saved: ", game.getPlayer().getName());
+        refreshView();
     }
 
     private void saveGame(Game game) {
@@ -156,38 +163,4 @@ public class GameActivity extends AppCompatActivity {
         editor.apply();
     }
 
-//    //Menu
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater menuInflater = getMenuInflater();
-//        menuInflater.inflate(R.menu.activity_start_menu, menu);
-//        return true;
-//    }
-//
-//    //Menu
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (item.getItemId() == R.id.action_menu) {
-//            Toast.makeText(GameActivity.this, R.string.toast_menu_start,
-//                    Toast.LENGTH_SHORT).show();
-//            return true;
-//        }
-//        if (item.getItemId() == R.id.action_log) {
-//            Toast.makeText(GameActivity.this, R.string.toast_menu_log,
-//                    Toast.LENGTH_SHORT).show();
-//            return true;
-//        }
-//        if (item.getItemId() == R.id.action_about) {
-//            Toast.makeText(GameActivity.this, R.string.toast_menu_about,
-//                    Toast.LENGTH_SHORT).show();
-//            return true;
-//        }
-//        if (item.getItemId() == R.id.action_exit) {
-//            Toast.makeText(GameActivity.this, R.string.toast_menu_exit,
-//                    Toast.LENGTH_SHORT).show();
-//            finish();
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 }
