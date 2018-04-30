@@ -102,6 +102,11 @@ public class StartMenuActivity extends AppCompatActivity {
         }
     }
 
+    public void onRankingClicked(View button) {
+        Intent intent = new Intent(this, RankingActivity.class);
+        startActivity(intent);
+    }
+
     private void saveGame(Game game) {
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();

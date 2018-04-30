@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.GameActivity" />
-        <activity android:name=".activities.EndGameActivity"></activity>
+        <activity android:name=".activities.EndGameActivity" />
+        <activity android:name=".activities.RankingActivity"></activity>
     </application>
 
 </manifest>

@@ -121,6 +121,7 @@ public class GameActivity extends AppCompatActivity {
         if (game.checkGameCondition() != GameStatus.IN_PROGRESS) {
             Intent intent = new Intent(this, EndGameActivity.class);
             intent.putExtra("player", player);
+            intent.putExtra("gameStatus", game.checkGameCondition().toString());
             startActivity(intent);
             deleteGame();
             finish();

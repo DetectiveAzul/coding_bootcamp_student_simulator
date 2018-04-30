@@ -10,6 +10,7 @@
         android:id="@+id/prototypeCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -19,6 +20,7 @@
         android:text="Here will go the image"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/loadButtonId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:onClick="onRankingClicked"
         android:text="@string/ranking"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
