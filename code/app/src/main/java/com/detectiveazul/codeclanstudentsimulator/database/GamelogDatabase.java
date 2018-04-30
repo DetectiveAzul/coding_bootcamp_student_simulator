@@ -9,8 +9,3 @@ public abstract class GamelogDatabase extends RoomDatabase {
     public abstract GamelogDao gamelogDao();
 }
 
-
-
-//    To create an instance of the database
-//    GamelogDatabase db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class, "gamelog-database").build();
-

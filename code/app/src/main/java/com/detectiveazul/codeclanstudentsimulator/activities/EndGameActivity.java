@@ -62,6 +62,7 @@ public class EndGameActivity extends AppCompatActivity {
                     gamelog.setScore(player.getScore());
                     gamelog.setResult(game.checkGameCondition().toString());
                     db.gamelogDao().insertAll(gamelog);
+                    Log.d("Entry saved", "Entry saved for player " + player.getName());
                 }
             }).start();
         }
