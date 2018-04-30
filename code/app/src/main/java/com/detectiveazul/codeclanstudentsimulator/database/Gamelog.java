@@ -12,18 +12,12 @@ public class Gamelog {
     @ColumnInfo(name = "student_name")
     private String studentName;
 
-    private String week;
-    private String day;
-    private String score;
+    private Integer week;
+    private Integer day;
+    private Integer score;
     private String result;
 
-    public Gamelog(int id, String studentName, String week, String day, String score, String result) {
-        this.id = id;
-        this.studentName = studentName;
-        this.week = week;
-        this.day = day;
-        this.score = score;
-        this.result = result;
+    public Gamelog() {
     }
 
     public int getId() {
@@ -42,27 +36,27 @@ public class Gamelog {
         this.studentName = studentName;
     }
 
-    public String getWeek() {
+    public Integer getWeek() {
         return week;
     }
 
-    public void setWeek(String week) {
+    public void setWeek(Integer week) {
         this.week = week;
     }
 
-    public String getDay() {
+    public Integer getDay() {
         return day;
     }
 
-    public void setDay(String day) {
+    public void setDay(Integer day) {
         this.day = day;
     }
 
-    public String getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
