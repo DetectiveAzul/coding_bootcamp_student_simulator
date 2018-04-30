@@ -67,7 +67,7 @@ public class Deck implements Serializable {
     //Calculate begin and end of Project Week boundaries
     private int calculateBeginOfProjectWeek() {
         if (cards.size() <= 5) return 0;
-        return cards.size() - 6;
+        return cards.size() - 5;
     }
 
     private int calculateEndOfProjectWeek() {

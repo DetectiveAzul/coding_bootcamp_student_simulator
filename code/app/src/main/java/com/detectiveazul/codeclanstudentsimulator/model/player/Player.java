@@ -59,12 +59,12 @@ public class Player implements Serializable {
     }
 
     private boolean checkMaxStat(Stat stat) {
-        if (stats.get(stat) > 100) return true;
+        if (stats.get(stat) >= 100) return true;
         return false;
     }
 
     private boolean checkMinStat(Stat stat) {
-        if (stats.get(stat) < 0) return true;
+        if (stats.get(stat) <= 0) return true;
         return false;
 
     }

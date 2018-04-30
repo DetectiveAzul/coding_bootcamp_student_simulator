@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CodeClan Student Simulator</string>
+    <!-- Saved game -->
+    <string name="saved_game">SAVED GAME</string>
     <!-- Menu buttons -->
     <string name="menu_start">Start Menu</string>
     <string name="menu_log">Previous Students</string>
@@ -10,6 +12,7 @@
     <string name="toast_menu_log">Previous Students</string>
     <string name="toast_menu_about">About the Game</string>
     <string name="toast_menu_exit">Exit Game</string>
+    <string name="toast_menu_cannot_load">There isn\'t a saved game</string>
     <!-- Start Screen buttons -->
     <string name="new_game">New Game</string>
     <string name="load_game">Load Game</string>

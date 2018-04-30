@@ -1,19 +1,15 @@
 package com.detectiveazul.codeclanstudentsimulator.activities;
 
-import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.detectiveazul.codeclanstudentsimulator.EndGameActivity;
 import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
@@ -21,8 +17,7 @@ import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
-
-import java.util.ArrayList;
+import com.google.gson.Gson;
 
 public class GameActivity extends AppCompatActivity {
     //Game variables
@@ -62,16 +57,12 @@ public class GameActivity extends AppCompatActivity {
         cardFirstOptionTextView = findViewById(R.id.cardFirstOptionTextViewId);
         cardSecondOptionTextView = findViewById(R.id.cardSecondOptionTextViewId);
 
-        //Get game variables from intent
-        Intent intent = getIntent();
-        game = (Game) intent.getSerializableExtra("game");
+        //Load game
+        game = loadGame();
         player = game.getPlayer();
         deck = game.getDeck();
 
-        //Initiate first Turn
-        game.turnBegins();
-
-        //Refresh the screen with the beginning of the game information
+        //Refresh the screen
         refreshView();
 
     }
@@ -129,15 +120,40 @@ public class GameActivity extends AppCompatActivity {
         game.turnEnds();
         if (game.checkGameCondition() != GameStatus.IN_PROGRESS) {
             Intent intent = new Intent(this, EndGameActivity.class);
+            intent.putExtra("player", player);
             startActivity(intent);
+            deleteGame();
             finish();
         } else {
             game.turnBegins();
+            saveGame(game);
+            Log.d("Game saved: ", game.getPlayer().getName());
             refreshView();
         }
     }
 
+    private void saveGame(Game game) {
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        Gson gson = new Gson();
+        editor.putString("saved game", gson.toJson(game));
+        editor.apply();
+    }
 
+    private Game loadGame() {
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
+        String gameSaved = sharedPref.getString("saved game", "{}");
+        Gson gson = new Gson();
+        Game myGame = gson.fromJson(gameSaved, Game.class);
+        return myGame;
+    }
+
+    private void deleteGame() {
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("saved game", "{}");
+        editor.apply();
+    }
 
 //    //Menu
 //    @Override
