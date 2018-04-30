@@ -2,7 +2,8 @@ package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
 public enum GameStatus {
     WIN,
-    LOSE;
+    LOSE,
+    IN_PROGRESS;
 
     GameStatus() {
     }

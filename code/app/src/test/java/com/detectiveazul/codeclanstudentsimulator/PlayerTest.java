@@ -4,6 +4,7 @@ import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.NeutralCard;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.PrizeCard;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.PlayerStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.ProjectWeekCard;
@@ -119,18 +120,18 @@ public class PlayerTest {
     @Test
     public void playerCanReturnIfLosesOver100() {
         player.increaseStat(Stat.ANXIETY, 51);
-        assertTrue(player.checkStatus());
+        assertEquals(PlayerStatus.DEAD, player.checkStatus());
     }
 
     @Test
     public void playerCanReturnIfLosesBelow0() {
         player.decreaseStat(Stat.ANXIETY, 51);
-        assertTrue(player.checkStatus());
+        assertEquals(PlayerStatus.DEAD, player.checkStatus());
     }
 
     @Test
     public void playerCanReturnIfNotLoses() {
         player.decreaseStat(Stat.ANXIETY, 10);
-        assertFalse(player.checkStatus());
+        assertEquals(PlayerStatus.ALIVE, player.checkStatus());
     }
 }

@@ -2,6 +2,7 @@ package com.detectiveazul.codeclanstudentsimulator.model.game;
 
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.PlayerStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.decks.ModuleDeck;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
@@ -82,7 +83,7 @@ public class Game implements Serializable {
     public GameStatus checkGameCondition() {
         if (gameLost()) return GameStatus.LOSE;
         if (gameWon()) return GameStatus.WIN;
-        return null;
+        return GameStatus.IN_PROGRESS;
     }
 
     private boolean gameWon() {
@@ -94,7 +95,7 @@ public class Game implements Serializable {
     }
 
     private boolean gameLost() {
-        if (player.checkStatus()) {
+        if (player.checkStatus() == PlayerStatus.DEAD) {
             finishGame();
             return true;
         }

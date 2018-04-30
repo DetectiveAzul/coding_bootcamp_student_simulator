@@ -1,6 +1,7 @@
 package com.detectiveazul.codeclanstudentsimulator.model.player;
 
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.PlayerStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 
 import java.io.Serializable;
@@ -10,10 +11,12 @@ public class Player implements Serializable {
     private String name;
     private HashMap<Stat, Integer> stats;
     private int score;
+    private int initialValue;
 
     public Player(String name) {
         this.name = name;
         this.stats = new HashMap<>();
+        this.initialValue = 50;
         initializeStats();
         this.score = 0;
     }
@@ -22,17 +25,19 @@ public class Player implements Serializable {
         return name;
     }
 
+    //Populate the User Hashmap of Stats
     private void initializeStats() {
-        stats.put(Stat.SLEEP, 50);
-        stats.put(Stat.ANXIETY, 50);
-        stats.put(Stat.SOCIAL_LIFE, 50);
-        stats.put(Stat.MONEY, 50);
+        for (Stat stat:Stat.values()) {
+            stats.put(stat, initialValue);
+        }
     }
 
+    //Get the value of a Stat
     public int getStat(Stat stat) {
         return stats.get(stat);
     }
 
+    //Increase and decrease Stats
     public void increaseStat(Stat stat, int amount) {
         int actualValue = getStat(stat);
         stats.put(stat, actualValue + amount);
@@ -43,13 +48,14 @@ public class Player implements Serializable {
         stats.put(stat, actualValue - amount);
     }
 
-    public boolean checkStatus() {
+    //Check Player Status
+    public PlayerStatus checkStatus() {
         for (Stat stat:
              stats.keySet()) {
-            if (checkMaxStat(stat)) return true;
-            if (checkMinStat(stat)) return true;
+            if (checkMaxStat(stat)) return PlayerStatus.DEAD;
+            if (checkMinStat(stat)) return PlayerStatus.DEAD;
         }
-        return false;
+        return PlayerStatus.ALIVE;
     }
 
     private boolean checkMaxStat(Stat stat) {
@@ -63,6 +69,7 @@ public class Player implements Serializable {
 
     }
 
+    //Get and set score
     public int getScore() {
         return score;
     }
@@ -71,6 +78,7 @@ public class Player implements Serializable {
         score += quantity;
     }
 
+    //Taking actions from cards
     public void takePrimaryAction(Card card) {
         HashMap<Stat, Boolean> cardEffect = card.getPrimaryEffect();
         int difficult = card.getDifficult();
@@ -88,6 +96,7 @@ public class Player implements Serializable {
         if (card.isProjectWeek()) projectWeekAnxiety();
     }
 
+    //Apply cardEffect
     private void applyCardEffect(HashMap<Stat, Boolean> cardEffect, int difficult) {
         for (Stat stat: cardEffect.keySet()) {
             if (cardEffect.get(stat)) increaseStat(stat, difficult);
@@ -95,6 +104,7 @@ public class Player implements Serializable {
         }
     }
 
+    //Increase Anxiety during Project Week Cards
     private void projectWeekAnxiety() {
         increaseStat(Stat.ANXIETY, 10);
     }

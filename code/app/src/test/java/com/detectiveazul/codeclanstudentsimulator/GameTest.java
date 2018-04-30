@@ -81,7 +81,7 @@ public class GameTest {
     @Test
     public void neitherWinOrLose() {
         game.getDeck().getCards().add(new Card(CardCollection.TEST));
-        assertNull(game.checkGameCondition());
+        assertEquals(GameStatus.IN_PROGRESS,game.checkGameCondition());
     }
 
     @Test
