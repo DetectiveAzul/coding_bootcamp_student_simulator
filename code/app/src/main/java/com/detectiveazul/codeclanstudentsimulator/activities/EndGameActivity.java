@@ -5,19 +5,24 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.database.Gamelog;
 import com.detectiveazul.codeclanstudentsimulator.database.GamelogDatabase;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.PlayerStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 
 public class EndGameActivity extends AppCompatActivity {
     //Views objects
-    private TextView playerNameTextView;
-    private TextView gameResultTextView;
+    private TextView endPlayerNameTextView;
+    private TextView endSceneTitleTextView;
+    private TextView winLoseDescriptionTextView;
 
     //Game and Player Objects
     private Game game;
@@ -31,8 +36,9 @@ public class EndGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_game);
         //Initializing views
-        playerNameTextView = findViewById(R.id.playerNameTextViewID);
-        gameResultTextView = findViewById(R.id.resultTextViewId);
+        endPlayerNameTextView = findViewById(R.id.endPlayerNameTextViewId);
+        endSceneTitleTextView = findViewById(R.id.endSceneTitleTextViewId);
+        winLoseDescriptionTextView = findViewById(R.id.winLoseDescriptionTextViewId);
 
         //Getting the intent
         Intent intent = getIntent();
@@ -41,14 +47,29 @@ public class EndGameActivity extends AppCompatActivity {
         player = game.getPlayer();
 
         //Printing
-        playerNameTextView.setText(player.getName());
-        gameResultTextView.setText(game.checkGameCondition().toString());
+        endPlayerNameTextView.setText(player.getName());
+        endSceneTitleTextView.setText(game.getEndTitleString());
+        if (player.checkStatus() == PlayerStatus.DEAD)
+            winLoseDescriptionTextView.setText(game.getDeadString());
 
         //Saving the log
         savingLog();
-        }
 
-        private void savingLog() {
+        //changing the action bar title
+        refreshTimeView();
+
+    }
+
+    //To put the last day on the title Screen
+    private void refreshTimeView() {
+        String week = getString(R.string.title_bar_week);
+        String day = getString(R.string.title_bar_day);
+        int weekNumber = game.getWeek();
+        int dayNumber = game.getDay();
+        getSupportActionBar().setTitle(week + weekNumber + day + dayNumber);
+    }
+
+    private void savingLog() {
             db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class,
                     "gamelog-database").build();
 
@@ -66,6 +87,29 @@ public class EndGameActivity extends AppCompatActivity {
                 }
             }).start();
         }
+
+    //Menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_start_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.action_about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if (item.getItemId() == R.id.action_exit) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
 }

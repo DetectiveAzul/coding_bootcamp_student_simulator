@@ -12,13 +12,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
-import com.detectiveazul.codeclanstudentsimulator.model.decks.Deck;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 import com.google.gson.Gson;
@@ -27,7 +25,6 @@ public class GameActivity extends AppCompatActivity {
     //Game variables
     private Game game;
     private Player player;
-    private Deck deck;
     //Player view
     private TextView playerNameTextView;
     private ProgressBar anxietyBar;
@@ -48,23 +45,22 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         //Initialize player views
-        playerNameTextView = findViewById(R.id.playerNameId);
+        playerNameTextView = findViewById(R.id.endPlayerNameId);
         anxietyBar = findViewById(R.id.anxietyBarId);
         sleepBar = findViewById(R.id.sleepBarId);
         socialLifeBar = findViewById(R.id.socialLifeBarId);
         moneyBar = findViewById(R.id.moneyBarId);
 
         //Initialize card views
-        cardNameTextView = findViewById(R.id.cardNameTextViewId);
+        cardNameTextView = findViewById(R.id.endSceneTitleTextViewId);
         cardProjectCardTextView = findViewById(R.id.cardProjectTextViewId);
-        cardDescriptionTextView = findViewById(R.id.cardDescriptionTextViewId);
+        cardDescriptionTextView = findViewById(R.id.winLoseDescriptionTextViewId);
         cardFirstOptionTextView = findViewById(R.id.cardFirstOptionTextViewId);
         cardSecondOptionTextView = findViewById(R.id.cardSecondOptionTextViewId);
 
         //Load game
         game = loadGame();
         player = game.getPlayer();
-        deck = game.getDeck();
 
         //Refresh the screen
         refreshView();
@@ -183,12 +179,6 @@ public class GameActivity extends AppCompatActivity {
     //Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_diary) {
-            Toast.makeText(GameActivity.this, R.string.menu_diary,
-                    Toast.LENGTH_SHORT).show();
-
-            return true;
-        }
         if (item.getItemId() == R.id.action_about) {
             Intent intent = new Intent(this, AboutActivity.class);
             startActivity(intent);

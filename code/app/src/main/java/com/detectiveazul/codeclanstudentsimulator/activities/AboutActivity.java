@@ -11,5 +11,8 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+
+        //Changing the action bar title
+        getSupportActionBar().setTitle(R.string.menu_about);
     }
 }

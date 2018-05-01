@@ -58,6 +58,9 @@ public class Player implements Serializable {
         return PlayerStatus.ALIVE;
     }
 
+
+
+
     private boolean checkMaxStat(Stat stat) {
         if (stats.get(stat) >= 100) return true;
         return false;
@@ -67,6 +70,17 @@ public class Player implements Serializable {
         if (stats.get(stat) <= 0) return true;
         return false;
 
+    }
+
+    public String endSceneString() {
+        String string = "";
+        for (Stat stat: stats.keySet()) {
+            if (checkMaxStat(stat))
+                string = stat.getDeadOver();
+            if (checkMinStat(stat))
+                string = stat.getDeadBelow();
+        }
+        return string;
     }
 
     //Get and set score

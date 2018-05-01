@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rankingItemGameResultViewId"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="result "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rankingItemPlayerScoreTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+
+    <TextView
+        android:id="@+id/rankingItemWeekTextViewId"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="week "
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+
+    <TextView
+        android:id="@+id/rankingItemPlayerScoreTextViewId"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/rankingItemGameResultViewId"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+
+    <TextView
+        android:id="@+id/rankingItemDayTextViewId"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="day"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+
+    <TextView
+        android:id="@+id/rankingItemPlayerNameTextViewId"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="student"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rankingItemGamelogIdTextViewId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rankingItemGamelogIdTextViewId"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Position"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/title_bar_week"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@+id/rankingItemGamelogIdTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toStartOf="@+id/rankingItemPlayerScoreTextViewId"
+        app:layout_constraintStart_toEndOf="@+id/rankingItemDayTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/title_bar_day"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@+id/rankingItemWeekTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/rankingItemPlayerNameTextViewId" />
+</android.support.constraint.ConstraintLayout>

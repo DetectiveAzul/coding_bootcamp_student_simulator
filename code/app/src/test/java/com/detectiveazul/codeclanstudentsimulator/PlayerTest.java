@@ -134,4 +134,12 @@ public class PlayerTest {
         player.decreaseStat(Stat.ANXIETY, 10);
         assertEquals(PlayerStatus.ALIVE, player.checkStatus());
     }
+
+    @Test
+    public void canGetEndString() {
+        player.decreaseStat(Stat.ANXIETY, 100);
+        assertEquals(
+                "You have achieved such a relaxed way of life that you have ascended to the Nirvana. Shame there aren't computers there",
+                player.endSceneString());
+    }
 }

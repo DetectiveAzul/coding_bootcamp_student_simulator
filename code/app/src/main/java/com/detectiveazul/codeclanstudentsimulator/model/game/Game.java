@@ -133,7 +133,9 @@ public class Game implements Serializable {
     }
 
     public void turnEnds() {
+        int score = currentCard.getDifficult();
         this.currentCard = null;
+        increasePlayerScore(score);
         timePass();
     }
 
@@ -161,6 +163,14 @@ public class Game implements Serializable {
     //Increase&Decrease Player Score
     public void increasePlayerScore(int quantity) {
         player.increaseScore(quantity);
+    }
+
+    public String getDeadString() {
+       return player.endSceneString();
+    }
+
+    public String getEndTitleString() {
+        return checkGameCondition().getEndSceneString();
     }
 
 }

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">CodeClan Student Simulator</string>
+    <!-- Action bar titles -->
+    <string name="tutorial">Tutorial</string>
     <!-- Saved game -->
     <string name="saved_game">SAVED GAME</string>
     <!-- Menu buttons -->
@@ -20,7 +22,17 @@
     <string name="ranking">Ranking</string>
     <!-- Start Screen Strings -->
     <string name="new_player">Introduce new student name</string>
+    <string name="new_player_short">Student name</string>
     <!-- Game Activity strings -->
     <string name="title_bar_week">Week\ </string>
     <string name="title_bar_day">\ \ Day\ </string>
+    <!-- Tutorial Activity strings -->
+    <string name="tutorial_explanation">Hello player! This game puts you on the skin of a student on a intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. Course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too much is as worse as too low.</string>
+    <string name="anxiety_explanation">This shows your Anxiety level</string>
+    <string name="social_life_explanation">This shows your Social Life level</string>
+    <string name="money_explanation">This shows your Money level</string>
+    <string name="sleep_explanation">This shows your Sleep level</string>
+    <string name="tutorial_button">Understood</string>
+    <!-- End scene default description -->
+    <string name="end_scene_win">You have succeeded on completing the whole intensive software developer program. You invested tons of time and money, but thanks to that, now you have become a junior developer</string>
 </resources>

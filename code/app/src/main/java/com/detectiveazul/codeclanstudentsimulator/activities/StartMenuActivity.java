@@ -21,30 +21,15 @@ import com.google.gson.Gson;
 import org.w3c.dom.Text;
 
 public class StartMenuActivity extends AppCompatActivity {
-    private Button newGameButton;
-    private Button loadGameButton;
-    private Button rankingButton;
-    private EditText newPlayerNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_menu);
 
-        newGameButton = findViewById(R.id.newGameButtonId);
-        loadGameButton = findViewById(R.id.loadButtonId);
-        rankingButton = findViewById(R.id.rankingButtonId);
-        newPlayerNameEditText = findViewById(R.id.newPlayerNameEditTextId);
-
     }
 
-    private String getNewPlayerName() {
-        String name = newPlayerNameEditText.getText().toString();
-        if (name.length() < 1) return "Generic Student";
-        newPlayerNameEditText.setText("");
-        return name;
-    }
-
+    //Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -52,7 +37,6 @@ public class StartMenuActivity extends AppCompatActivity {
         return true;
     }
 
-    //Menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_about) {
@@ -69,18 +53,8 @@ public class StartMenuActivity extends AppCompatActivity {
 
     //Clicking buttons
     public void onNewGameButtonClicked(View button) {
-        //Delete previous game
-        deleteGame();
-        //Then create the game
-        Player player = new Player(getNewPlayerName());
-        Game game = new Game(player);
-        //Instantiate the first turn
-        game.turnBegins();
-        //Save the game
-        saveGame(game);
-        //And go to the game Activity
-        Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
+        Intent tutorialIntent = new Intent(this, TutorialActivity.class);
+        startActivity(tutorialIntent);
 
     }
 
@@ -105,21 +79,6 @@ public class StartMenuActivity extends AppCompatActivity {
     public void onRankingClicked(View button) {
         Intent intent = new Intent(this, RankingActivity.class);
         startActivity(intent);
-    }
-
-    private void saveGame(Game game) {
-        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        Gson gson = new Gson();
-        editor.putString("saved game", gson.toJson(game));
-        editor.apply();
-    }
-
-    private void deleteGame() {
-        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("saved game", "{}");
-        editor.apply();
     }
 
     private Game loadGame() {

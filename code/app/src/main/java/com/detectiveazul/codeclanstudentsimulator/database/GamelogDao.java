@@ -9,7 +9,7 @@ import java.util.List;
 
 @Dao
 public interface GamelogDao {
-    @Query("SELECT * FROM gamelog ORDER BY score")
+    @Query("SELECT * FROM gamelog ORDER BY score DESC")
     List<Gamelog> getAll();
 
     @Insert
