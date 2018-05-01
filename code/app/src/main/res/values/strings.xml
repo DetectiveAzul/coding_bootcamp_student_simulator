@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">CodeClan Student Simulator</string>
+    <string name="app_name">Coding Bootcamp Simulator</string>
+    <string name="app_author">Developed by Jaime Lopez</string>
+    <string name="app_version">Version 1.0</string>
     <!-- Action bar titles -->
     <string name="tutorial">Tutorial</string>
     <!-- Saved game -->
@@ -35,4 +37,9 @@
     <string name="tutorial_button">Understood</string>
     <!-- End scene default description -->
     <string name="end_scene_win">You have succeeded on completing the whole intensive software developer program. You invested tons of time and money, but thanks to that, now you have become a junior developer</string>
+    <string name="about_info">This app was developed during week 9 of the CodeClan intensive programming course. Based on a card game project brief, I have tweaked the idea into a simulation game. The player receives a card representing an event during the (parodic) daily life of a bootcamp student and their decision will affect a set of stats (money, sleep, anxiety, social life). If they are not balanced, they drop the course and the game will finish.
+
+MVP is to have the Game logic developed in JAVA, and afterwards, as an extension, this will be transferred into a basic Android UI. As a final task, the ability to load/save the game and a ranking log with past game scores recorded with SQLite through Android Room.</string>
+    <string name="icon_credits">Icons made by dDara from www.flaticon.com are licensed Creative Commons BY 3.0</string>
+    <string name="git_repo">If you\'re interested on looking at the source code, I encourage you to access the GitHub repo I posted on the following link: https://github.com/DetectiveAzul/codeclan_student_simulator</string>
 </resources>
