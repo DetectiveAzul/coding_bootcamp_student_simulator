@@ -9,6 +9,7 @@ import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Game implements Serializable {
     private Player player;
@@ -16,14 +17,26 @@ public class Game implements Serializable {
     private Card currentCard;
     private int[] currentTime;
     private boolean gameFinished;
+    private ArrayList<String> studentJournal;
 
     public Game(Player player) {
         this.player = player;
         this.deck = new Deck(0, 82);
         this.currentTime = new int[] {1,1};
         this.gameFinished = false;
+        this.studentJournal = new ArrayList<String>();
         buildGameDeck();
     }
+    //Getter for the student journal
+    public ArrayList<String> getStudentJournal() {
+        return studentJournal;
+    }
+
+    //Adding an entry on the student journal
+    public void addEntryToStudentJournal(String string) {
+        studentJournal.add(string);
+    }
+
 
     //It builds the gameDeck by creating three moduleDecks
 
