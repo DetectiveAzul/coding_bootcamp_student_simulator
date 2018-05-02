@@ -73,7 +73,7 @@ public class TutorialActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.activity_start_menu, menu);
+        menuInflater.inflate(R.menu.activity_game_menu, menu);
         return true;
     }
 

@@ -1,5 +1,6 @@
 package com.detectiveazul.codeclanstudentsimulator.activities;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +15,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
+import com.detectiveazul.codeclanstudentsimulator.database.Gamelog;
+import com.detectiveazul.codeclanstudentsimulator.database.GamelogDatabase;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
@@ -37,6 +40,9 @@ public class GameActivity extends AppCompatActivity {
     private TextView cardDescriptionTextView;
     private TextView cardFirstOptionTextView;
     private TextView cardSecondOptionTextView;
+    //Database
+    private GamelogDatabase db;
+
 
 
     @Override
@@ -132,6 +138,7 @@ public class GameActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EndGameActivity.class);
         intent.putExtra("game", game);
         startActivity(intent);
+        savingLog();
         deleteGame();
         finish();
     }
@@ -189,6 +196,26 @@ public class GameActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    //Saving the ranking at ending the game
+    private void savingLog() {
+        db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class,
+                "gamelog-database").build();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Gamelog gamelog =new Gamelog();
+                gamelog.setStudentName(player.getName());
+                gamelog.setWeek(game.getWeek());
+                gamelog.setDay(game.getDay());
+                gamelog.setScore(player.getScore());
+                gamelog.setResult(game.checkGameCondition().toString());
+                db.gamelogDao().insertAll(gamelog);
+                Log.d("Entry saved", "Entry saved for player " + player.getName());
+            }
+        }).start();
     }
 
 

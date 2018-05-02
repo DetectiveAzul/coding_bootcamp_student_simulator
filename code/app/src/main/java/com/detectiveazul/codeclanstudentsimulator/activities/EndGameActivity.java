@@ -52,9 +52,6 @@ public class EndGameActivity extends AppCompatActivity {
         if (player.checkStatus() == PlayerStatus.DEAD)
             winLoseDescriptionTextView.setText(game.getDeadString());
 
-        //Saving the log
-        savingLog();
-
         //changing the action bar title
         refreshTimeView();
 
@@ -68,25 +65,6 @@ public class EndGameActivity extends AppCompatActivity {
         int dayNumber = game.getDay();
         getSupportActionBar().setTitle(week + weekNumber + day + dayNumber);
     }
-
-    private void savingLog() {
-            db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class,
-                    "gamelog-database").build();
-
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    Gamelog gamelog =new Gamelog();
-                    gamelog.setStudentName(player.getName());
-                    gamelog.setWeek(game.getWeek());
-                    gamelog.setDay(game.getDay());
-                    gamelog.setScore(player.getScore());
-                    gamelog.setResult(game.checkGameCondition().toString());
-                    db.gamelogDao().insertAll(gamelog);
-                    Log.d("Entry saved", "Entry saved for player " + player.getName());
-                }
-            }).start();
-        }
 
     //Menu
     @Override

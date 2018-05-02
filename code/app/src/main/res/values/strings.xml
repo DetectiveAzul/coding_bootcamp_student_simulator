@@ -10,7 +10,8 @@
     <string name="menu_start">Start Menu</string>
     <string name="menu_log">Previous Students</string>
     <string name="menu_about">About the Game</string>
-    <string name="menu_exit">Exit Game</string>
+    <string name="menu_exit">Go back to Start Menu</string>
+    <string name="menu_exit_app">Exit App</string>
     <string name="menu_diary">Student Journal</string>
     <string name="reset_ranking">Reset Ranking</string>
     <!-- Menu toasts -->
