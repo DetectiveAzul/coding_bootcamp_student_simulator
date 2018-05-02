@@ -1,7 +1,6 @@
 package com.detectiveazul.codeclanstudentsimulator.activities;
 
 import android.arch.persistence.room.Room;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,20 +41,6 @@ public class RankingActivity extends AppCompatActivity {
         listView.setAdapter(rankingAdapter);
     }
 
-    //Load the database and put it into a list
-    private void setListOfGameLog() {
-            db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class,
-                    "gamelog-database").build();
-
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    list.addAll(db.gamelogDao().getAll());
-                    Log.d("List has", "number of entries: " + list.size());
-                }
-            }).start();
-        }
-
     //Menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -74,9 +59,34 @@ public class RankingActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void deleteRanking() {
-        //TODO
+    //Load the database and put it into a list
+    private void setListOfGameLog() {
+            db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class,
+                    "gamelog-database").build();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    list.addAll(db.gamelogDao().getAll());
+                    Log.d("List has", "number of entries: " + list.size());
+                }
+            }).start();
     }
+
+
+    //Delete the database
+    private void deleteRanking() {
+        db = Room.databaseBuilder(getApplicationContext(), GamelogDatabase.class, "gamelog-database").build();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                List<Gamelog> listToDelete = db.gamelogDao().getAll();
+                db.gamelogDao().deleteAll(listToDelete);
+            }
+        }).start();
+        recreate();
+    }
+
 
 }
 

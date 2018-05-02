@@ -18,5 +18,7 @@ public interface GamelogDao {
     @Delete
     void delete(Gamelog gamelog);
 
+    @Delete
+    void deleteAll(List<Gamelog> list);
 
 }
