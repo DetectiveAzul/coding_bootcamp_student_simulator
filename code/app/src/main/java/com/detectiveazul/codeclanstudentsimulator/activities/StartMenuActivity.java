@@ -59,9 +59,6 @@ public class StartMenuActivity extends AppCompatActivity {
     }
 
     public void onLoadGameClicked(View button) {
-        ////Testing load after deleting the game
-        //deleteGame();
-
         //Check if there is any saved game
         Game game = loadGame();
         if (game.getPlayer() == null) {

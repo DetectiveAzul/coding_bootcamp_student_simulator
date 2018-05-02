@@ -151,20 +151,20 @@ public class GameActivity extends AppCompatActivity {
     }
 
     //Loading and Saving game
-    private void saveGame(Game game) {
-        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        Gson gson = new Gson();
-        editor.putString("saved game", gson.toJson(game));
-        editor.apply();
-    }
-
     private Game loadGame() {
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
         String gameSaved = sharedPref.getString("saved game", "{}");
         Gson gson = new Gson();
         Game myGame = gson.fromJson(gameSaved, Game.class);
         return myGame;
+    }
+
+    private void saveGame(Game game) {
+        SharedPreferences sharedPref = getSharedPreferences(getString(R.string.saved_game), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        Gson gson = new Gson();
+        editor.putString("saved game", gson.toJson(game));
+        editor.apply();
     }
 
     private void deleteGame() {
@@ -217,6 +217,5 @@ public class GameActivity extends AppCompatActivity {
             }
         }).start();
     }
-
 
 }

@@ -28,9 +28,6 @@ public class EndGameActivity extends AppCompatActivity {
     private Game game;
     private Player player;
 
-    //Database object
-    private GamelogDatabase db;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

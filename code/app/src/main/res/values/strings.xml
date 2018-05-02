@@ -19,7 +19,7 @@
     <string name="toast_menu_log">Previous Students</string>
     <string name="toast_menu_about">About the Game</string>
     <string name="toast_menu_exit">Exit Game</string>
-    <string name="toast_menu_cannot_load">There isn\'t a saved game</string>
+    <string name="toast_menu_cannot_load">There is no saved games</string>
     <!-- Start Screen buttons -->
     <string name="new_game">New Game</string>
     <string name="load_game">Load Game</string>
@@ -31,7 +31,7 @@
     <string name="title_bar_week">Week\ </string>
     <string name="title_bar_day">\ \ Day\ </string>
     <!-- Tutorial Activity strings -->
-    <string name="tutorial_explanation">Hello player! This game puts you on the skin of a student on a intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. Course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too much is as worse as too low.</string>
+    <string name="tutorial_explanation">Hello player! This game puts you in the skin of a student on an intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. Course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too much is as worse as too low.</string>
     <string name="anxiety_explanation">This shows your Anxiety level</string>
     <string name="social_life_explanation">This shows your Social Life level</string>
     <string name="money_explanation">This shows your Money level</string>
