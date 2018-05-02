@@ -4,6 +4,7 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -42,6 +44,7 @@ public class GameActivity extends AppCompatActivity {
     private TextView cardSecondOptionTextView;
     //Card image
     private TextView npcNameTextView;
+    private ImageView npcFaceImageView;
     //Database
     private GamelogDatabase db;
 
@@ -68,6 +71,7 @@ public class GameActivity extends AppCompatActivity {
 
         //Initialize card image
         npcNameTextView = findViewById(R.id.npcNameTextViewId);
+        npcFaceImageView = findViewById(R.id.npcFaceImageViewId);
 
         //Load game
         game = loadGame();
@@ -117,6 +121,15 @@ public class GameActivity extends AppCompatActivity {
     private void refreshCardImage() {
         String name = game.getCurrentCard().getPersonName();
         npcNameTextView.setText(name);
+        //TODO randomize depending on type
+        String string = game.getCurrentCard().getFaceFileName();
+        int drawableFace = getDrawable(string);
+        npcFaceImageView.setImageResource(drawableFace);
+    }
+
+    private int getDrawable(String drawableName) {
+        int resID = getResources().getIdentifier(drawableName, "drawable",  getPackageName());
+        return resID;
     }
 
     private void changeTitleOfActivity(String string) {

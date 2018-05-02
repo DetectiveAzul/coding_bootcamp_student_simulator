@@ -1,15 +1,18 @@
 package com.detectiveazul.codeclanstudentsimulator.model.cards;
 
 import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Face;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Person;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.StatEffect;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.Random;
 
 public class Card implements Serializable {
     private CardCollection card;
+    private String faceFileName;
     private boolean prize;
     private boolean projectWeek;
     private HashMap<Stat, Boolean> primaryEffect;
@@ -21,6 +24,7 @@ public class Card implements Serializable {
         this.projectWeek = false;
         this.primaryEffect = new HashMap<>();
         this.secondaryEffect = new HashMap<>();
+        setFaceFileName();
         setEffects();
     }
 
@@ -32,6 +36,28 @@ public class Card implements Serializable {
 
     public String getName() {
         return card().getName();
+    }
+
+    public String getFaceFileName() {
+        return faceFileName;
+    }
+
+    public void setFaceFileName() {
+        Random rand = new Random();
+        int maxRandom;
+        switch (getPerson()) {
+            case STUDENT:
+                maxRandom = Face.STUDENT_FACE.getFilenameArray().length - 1;
+                this.faceFileName = Face.STUDENT_FACE.getFilenameArray()[rand.nextInt(maxRandom)];
+                break;
+            case TEACHER:
+                maxRandom = Face.TEACHER_FACE.getFilenameArray().length - 1;
+                this.faceFileName = Face.TEACHER_FACE.getFilenameArray()[rand.nextInt(maxRandom)];
+                break;
+            default:
+                maxRandom = Face.FLATMATE_FACE.getFilenameArray().length - 1;
+                this.faceFileName = Face.FLATMATE_FACE.getFilenameArray()[rand.nextInt(maxRandom)];
+        }
     }
 
     public int getModule() {

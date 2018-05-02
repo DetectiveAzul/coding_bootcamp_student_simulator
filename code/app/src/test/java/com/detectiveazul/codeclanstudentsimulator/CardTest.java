@@ -14,6 +14,7 @@ import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertNotNull;
 
 public class CardTest {
     private Card card00;
@@ -107,5 +108,10 @@ public class CardTest {
     @Test
     public void personHasName() {
         assertEquals("One of your classmates", card00.getPersonName());
+    }
+
+    @Test
+    public void hasFace() {
+        assertNotNull("", card00.getFaceFileName());
     }
 }
