@@ -60,22 +60,22 @@ public class RankingActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.activity_start_menu, menu);
+        menuInflater.inflate(R.menu.activity_game_ranking, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_about) {
-            Intent intent = new Intent(this, AboutActivity.class);
-            startActivity(intent);
+        if (item.getItemId() == R.id.action_reset) {
+            deleteRanking();
             return true;
         }
-        if (item.getItemId() == R.id.action_exit) {
-            finish();
-            return true;
-        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+    private void deleteRanking() {
+        //TODO
     }
 
 }
