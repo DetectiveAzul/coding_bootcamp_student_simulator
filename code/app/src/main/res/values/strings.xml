@@ -132,4 +132,49 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="m1c11_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
     <string name="m1c11_first_option">Oh, sure! A beer sounds fine</string>
     <string name="m1c11_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c12_name">Beer Afternoon</string>
+    <string name="m1c12_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c12_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c12_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c13_name">Beer Afternoon</string>
+    <string name="m1c13_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c13_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c13_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c14_name">Beer Afternoon</string>
+    <string name="m1c14_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c14_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c14_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c15_name">Beer Afternoon</string>
+    <string name="m1c15_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c15_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c15_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c16_name">Beer Afternoon</string>
+    <string name="m1c16_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c16_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c16_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c17_name">Beer Afternoon</string>
+    <string name="m1c17_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c17_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c17_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c18_name">Beer Afternoon</string>
+    <string name="m1c18_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c18_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c18_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c19_name">Beer Afternoon</string>
+    <string name="m1c19_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c19_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c19_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c20_name">Beer Afternoon</string>
+    <string name="m1c20_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c20_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c20_second_option">"I need to save money, sorry</string>
 </resources>
