@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".activities.GameActivity">
 
+    <TextView
+        android:id="@+id/npcNameTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Other person"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/cardDescriptionTextViewId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/npcFaceImageViewId" />
+
     <ProgressBar
         android:id="@+id/anxietyBarId"
         style="?android:attr/progressBarStyleHorizontal"
@@ -143,14 +156,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         android:gravity="center"
         android:text="CardDescription"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toTopOf="@+id/cardSecondOptionTextViewId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/npcNameTextViewId" />
 
     <TextView
         android:id="@+id/cardFirstOptionTextViewId"
@@ -203,7 +216,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/npcFaceImageViewId"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="32dp"
@@ -211,11 +224,10 @@
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardDescriptionTextViewId"
+        app:layout_constraintBottom_toTopOf="@+id/npcNameTextViewId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardProjectTextViewId"
-        app:layout_constraintVertical_bias="0.6"
-        app:srcCompat="@drawable/ic_place_holder" />
+        app:srcCompat="@drawable/flatmate_2" />
 
 </android.support.constraint.ConstraintLayout>

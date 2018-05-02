@@ -112,7 +112,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="ProjectWeek"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/npcFaceImageViewId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardTitleTextViewId" />
 
@@ -128,7 +128,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="CardName"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/npcFaceImageViewId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moneyImageViewId" />
 
@@ -146,7 +146,7 @@
         android:text="CardDescription"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toTopOf="@+id/cardSecondOptionTextViewId"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/npcFaceImageViewId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardProjectTextViewId" />
 
@@ -181,7 +181,7 @@
         android:text="SecondOption"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/npcFaceImageViewId"
         app:layout_constraintStart_toEndOf="@+id/cardFirstOptionTextViewId" />
 
     <TextView
@@ -196,12 +196,12 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="PlayerName"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/npcFaceImageViewId"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/npcFaceImageViewId"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -210,10 +210,27 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/npcNameTextViewId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/socialLifeBarId"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_place_holder" />
+        app:srcCompat="@drawable/flatmate_1" />
+
+    <TextView
+        android:id="@+id/npcNameTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Other person"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardSecondOptionTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/npcFaceImageViewId" />
 
 </android.support.constraint.ConstraintLayout>

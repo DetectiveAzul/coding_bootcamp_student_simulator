@@ -40,6 +40,8 @@ public class GameActivity extends AppCompatActivity {
     private TextView cardDescriptionTextView;
     private TextView cardFirstOptionTextView;
     private TextView cardSecondOptionTextView;
+    //Card image
+    private TextView npcNameTextView;
     //Database
     private GamelogDatabase db;
 
@@ -64,6 +66,9 @@ public class GameActivity extends AppCompatActivity {
         cardFirstOptionTextView = findViewById(R.id.cardFirstOptionTextViewId);
         cardSecondOptionTextView = findViewById(R.id.cardSecondOptionTextViewId);
 
+        //Initialize card image
+        npcNameTextView = findViewById(R.id.npcNameTextViewId);
+
         //Load game
         game = loadGame();
         player = game.getPlayer();
@@ -78,17 +83,7 @@ public class GameActivity extends AppCompatActivity {
         refreshStatsView();
         refreshTimeView();
         refreshCardView();
-    }
-
-    private void refreshCardView() {
-        Card card = game.getCurrentCard();
-        cardNameTextView.setText(card.getName());
-        if (!card.isProjectWeek()) { cardProjectCardTextView.setVisibility(View.INVISIBLE);
-        } else {
-            cardProjectCardTextView.setVisibility(View.VISIBLE); }
-        cardDescriptionTextView.setText(card.getDescription());
-        cardFirstOptionTextView.setText(card.getPrimaryOption());
-        cardSecondOptionTextView.setText(card.getSecondaryOption());
+        refreshCardImage();
     }
 
     private void refreshStatsView() {
@@ -106,6 +101,22 @@ public class GameActivity extends AppCompatActivity {
         int dayNumber = game.getDay();
         changeTitleOfActivity(week + weekNumber + day + dayNumber);
 
+    }
+
+    private void refreshCardView() {
+        Card card = game.getCurrentCard();
+        cardNameTextView.setText(card.getName());
+        if (!card.isProjectWeek()) { cardProjectCardTextView.setVisibility(View.INVISIBLE);
+        } else {
+            cardProjectCardTextView.setVisibility(View.VISIBLE); }
+        cardDescriptionTextView.setText(card.getDescription());
+        cardFirstOptionTextView.setText(card.getPrimaryOption());
+        cardSecondOptionTextView.setText(card.getSecondaryOption());
+    }
+
+    private void refreshCardImage() {
+        String name = game.getCurrentCard().getPersonName();
+        npcNameTextView.setText(name);
     }
 
     private void changeTitleOfActivity(String string) {
