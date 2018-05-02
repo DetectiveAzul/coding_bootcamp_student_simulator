@@ -165,11 +165,11 @@ public class Game implements Serializable {
         player.increaseScore(quantity);
     }
 
-    public String getDeadString() {
+    public int getDeadString() {
        return player.endSceneString();
     }
 
-    public String getEndTitleString() {
+    public int getEndTitleString() {
         return checkGameCondition().getEndSceneString();
     }
 

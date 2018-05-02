@@ -10,7 +10,7 @@ public class DifficultTest {
 
     @Test
     public void hasPrettyName() {
-        assertEquals("Easy", Difficult.EASY.getPrettyName());
+        assertEquals(R.string.easy, Difficult.EASY.getPrettyName());
     }
 
     @Test

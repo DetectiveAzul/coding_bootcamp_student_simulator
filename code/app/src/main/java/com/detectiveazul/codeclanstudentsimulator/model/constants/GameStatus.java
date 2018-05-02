@@ -1,19 +1,21 @@
 package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
+import com.detectiveazul.codeclanstudentsimulator.R;
+
 import java.io.Serializable;
 
 public enum GameStatus implements Serializable {
-    WIN("Congratulations! You have complete the coding intensive program!"),
-    LOSE("It's a shame, but you fail!"),
-    IN_PROGRESS("Game is still in progress");
+    WIN(R.string.win),
+    LOSE(R.string.lose),
+    IN_PROGRESS(R.string.in_progress);
 
-    private final String endSceneString;
+    private final int endSceneString;
 
-    GameStatus(String endSceneString) {
+    GameStatus(int endSceneString) {
         this.endSceneString = endSceneString;
     }
 
-    public String getEndSceneString() {
+    public int getEndSceneString() {
         return endSceneString;
     }
 }

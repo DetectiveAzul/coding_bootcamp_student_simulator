@@ -72,15 +72,15 @@ public class Player implements Serializable {
 
     }
 
-    public String endSceneString() {
-        String string = "";
+    public int endSceneString() {
+        int resString = 0;
         for (Stat stat: stats.keySet()) {
             if (checkMaxStat(stat))
-                string = stat.getDeadOver();
+                resString = stat.getDeadOver();
             if (checkMinStat(stat))
-                string = stat.getDeadBelow();
+                resString = stat.getDeadBelow();
         }
-        return string;
+        return resString;
     }
 
     //Get and set score

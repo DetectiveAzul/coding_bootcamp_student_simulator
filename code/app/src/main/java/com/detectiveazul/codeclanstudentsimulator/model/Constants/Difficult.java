@@ -1,21 +1,23 @@
 package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
-public enum Difficult {
-    NEUTRAL("Neutral", 0),
-    EASY("Easy", 10),
-    MEDIUM("Medium", 15),
-    HARD("Hard", 20),
-    EXTRA_HARD("Extra Hard", 30);
+import com.detectiveazul.codeclanstudentsimulator.R;
 
-    private final String prettyName;
+public enum Difficult {
+    NEUTRAL(R.string.neutral, 0),
+    EASY(R.string.easy, 10),
+    MEDIUM(R.string.medium, 15),
+    HARD(R.string.hard, 20),
+    EXTRA_HARD(R.string.extra_hard, 30);
+
+    private final int prettyName;
     private final int level;
 
-    Difficult(String prettyName, int level) {
+    Difficult(int prettyName, int level) {
         this.prettyName = prettyName;
         this.level = level;
     }
 
-    public String getPrettyName() {
+    public int getPrettyName() {
         return prettyName;
     }
 

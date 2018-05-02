@@ -119,9 +119,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void refreshCardImage() {
-        String name = game.getCurrentCard().getPersonName();
-        npcNameTextView.setText(name);
-        //TODO randomize depending on type
+        npcNameTextView.setText(game.getCurrentCard().getPersonName());
         String string = game.getCurrentCard().getFaceFileName();
         int drawableFace = getDrawable(string);
         npcFaceImageView.setImageResource(drawableFace);

@@ -44,4 +44,92 @@
 MVP is to have the Game logic developed in JAVA, and afterwards, as an extension, this will be transferred into a basic Android UI. As a final task, the ability to load/save the game and a ranking log with past game scores recorded with SQLite through Android Room.</string>
     <string name="icon_credits">Icons made by dDara from www.flaticon.com are licensed Creative Commons BY 3.0</string>
     <string name="git_repo">If you\'re interested on looking at the source code, I encourage you to access the GitHub repo I posted on the following link: https://github.com/DetectiveAzul/codeclan_student_simulator</string>
+    <!-- Difficulty strings -->
+    <string name="neutral">Neutral</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="extra_hard">Extra-Hard</string>
+    <!-- GameStatus -->
+    <string name="win">Congratulations! You have complete the coding intensive program!</string>
+    <string name="lose">"It's a shame, but you fail!"</string>
+    <string name="in_progress">Game is still in progress</string>
+    <!-- Person -->
+    <string name="student">One of your classmates</string>
+    <string name="teacher">Today\'s instructor</string>
+    <string name="flatmate">Your fellow flatmate</string>
+    <!-- stats -->
+    <string name="money">Money</string>
+    <string name="money_over">You quit the course after saving so much money that you feel you could live of it the rest of your life</string>
+    <string name="money_below">You quit the course after discovering your bank account is below zero. You need to find a job real quick</string>
+
+    <string name="anxiety">Anxiety</string>
+    <string name="anxiety_over">Too much social life distract you from your studies, making you fail the final exams. Next time maybe</string>
+    <string name="anxiety_below">You have lost all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
+
+    <string name="sleep">Sleep</string>
+    <string name="sleep_over">You awaken after two years of being comatose due to an Anxiety attack. Chill out next time</string>
+    <string name="sleep_below">You have achieved such a relaxed way of life that you have ascended to the Nirvana. Shame there aren\'t computers there</string>
+
+    <string name="social_life">Social Life</string>
+    <string name="social_life_over">What? Uh? What year it is? You have spend your whole 16 weeks sleeping!</string>
+    <string name="social_life_below">You fell asleep on your finals. You should take a break from time to time</string>
+
+
+    <!-- card collection -->
+    <!--a card whole set-->
+    <string name="m1c01_name">Beer Afternoon</string>
+    <string name="m1c01_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c01_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c01_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c02_name">Beer Afternoon</string>
+    <string name="m1c02_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c02_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c02_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c03_name">Beer Afternoon</string>
+    <string name="m1c03_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c03_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c03_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c04_name">Beer Afternoon</string>
+    <string name="m1c04_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c04_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c04_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c05_name">Beer Afternoon</string>
+    <string name="m1c05_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c05_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c05_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c06_name">Beer Afternoon</string>
+    <string name="m1c06_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c06_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c06_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c07_name">Beer Afternoon</string>
+    <string name="m1c07_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c07_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c07_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c08_name">Beer Afternoon</string>
+    <string name="m1c08_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c08_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c08_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c09_name">Beer Afternoon</string>
+    <string name="m1c09_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c09_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c09_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c10_name">Beer Afternoon</string>
+    <string name="m1c10_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c10_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c10_second_option">"I need to save money, sorry</string>
+    <!--a card whole set-->
+    <string name="m1c11_name">Beer Afternoon</string>
+    <string name="m1c11_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
+    <string name="m1c11_first_option">Oh, sure! A beer sounds fine</string>
+    <string name="m1c11_second_option">"I need to save money, sorry</string>
 </resources>

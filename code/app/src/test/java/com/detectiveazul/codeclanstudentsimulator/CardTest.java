@@ -33,7 +33,7 @@ public class CardTest {
 
     @Test
     public void hasName() {
-        assertEquals("A beer", card00.getName());
+        assertEquals(R.string.m1c01_name, card00.getName());
     }
     @Test
     public void hasModule() {
@@ -41,16 +41,16 @@ public class CardTest {
     }
     @Test
     public void hasDescription() {
-        assertEquals("A friend want a beer", card00.getDescription());
+        assertEquals(R.string.m1c01_description, card00.getDescription());
     }
     @Test
     public void hasPrimaryOption() {
-        assertEquals("Yes, please", card00.getPrimaryOption());
+        assertEquals(R.string.m1c01_first_option, card00.getPrimaryOption());
     }
 
     @Test
     public void hasSecondaryOption() {
-        assertEquals("I should study...", card00.getSecondaryOption());
+        assertEquals(R.string.m1c01_second_option, card00.getSecondaryOption());
     }
 
     @Test
@@ -106,12 +106,7 @@ public class CardTest {
     }
 
     @Test
-    public void personHasName() {
-        assertEquals("One of your classmates", card00.getPersonName());
-    }
-
-    @Test
     public void hasFace() {
-        assertNotNull("", card00.getFaceFileName());
+        assertNotNull(card00.getFaceFileName());
     }
 }

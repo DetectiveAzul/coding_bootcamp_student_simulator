@@ -34,7 +34,7 @@ public class Card implements Serializable {
         return card;
     }
 
-    public String getName() {
+    public int getName() {
         return card().getName();
     }
 
@@ -47,15 +47,15 @@ public class Card implements Serializable {
         int maxRandom;
         switch (getPerson()) {
             case STUDENT:
-                maxRandom = Face.STUDENT_FACE.getFilenameArray().length - 1;
+                maxRandom = Face.STUDENT_FACE.getFilenameArray().length;
                 this.faceFileName = Face.STUDENT_FACE.getFilenameArray()[rand.nextInt(maxRandom)];
                 break;
             case TEACHER:
-                maxRandom = Face.TEACHER_FACE.getFilenameArray().length - 1;
+                maxRandom = Face.TEACHER_FACE.getFilenameArray().length;
                 this.faceFileName = Face.TEACHER_FACE.getFilenameArray()[rand.nextInt(maxRandom)];
                 break;
             default:
-                maxRandom = Face.FLATMATE_FACE.getFilenameArray().length - 1;
+                maxRandom = Face.FLATMATE_FACE.getFilenameArray().length;
                 this.faceFileName = Face.FLATMATE_FACE.getFilenameArray()[rand.nextInt(maxRandom)];
         }
     }
@@ -64,15 +64,15 @@ public class Card implements Serializable {
         return card().getModule();
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return card().getDescription();
     }
 
-    public String getPrimaryOption() {
+    public int getPrimaryOption() {
         return card().getPrimaryOption();
     }
 
-    public String getSecondaryOption() {
+    public int getSecondaryOption() {
         return card().getSecondaryOption();
     }
 
@@ -92,7 +92,7 @@ public class Card implements Serializable {
         return card.getPerson();
     }
 
-    public String getPersonName() {
+    public int getPersonName() {
         return card.getPerson().getPersonDescription();
     }
 

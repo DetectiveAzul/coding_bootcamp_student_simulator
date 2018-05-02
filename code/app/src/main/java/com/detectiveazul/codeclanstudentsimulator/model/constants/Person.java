@@ -1,17 +1,19 @@
 package com.detectiveazul.codeclanstudentsimulator.model.constants;
 
+import com.detectiveazul.codeclanstudentsimulator.R;
+
 public enum Person {
-    STUDENT("One of your classmates"),
-    TEACHER("Today's instructor"),
-    FLATMATE("Your fellow flatmate");
+    STUDENT(R.string.student),
+    TEACHER(R.string.teacher),
+    FLATMATE(R.string.flatmate);
 
-    private final String personDescription;
+    private final int personDescription;
 
-    Person(String personDescription) {
+    Person(int personDescription) {
         this.personDescription = personDescription;
     }
 
-    public String getPersonDescription() {
+    public int getPersonDescription() {
         return personDescription;
     }
 }

@@ -138,8 +138,6 @@ public class PlayerTest {
     @Test
     public void canGetEndString() {
         player.decreaseStat(Stat.ANXIETY, 100);
-        assertEquals(
-                "You have achieved such a relaxed way of life that you have ascended to the Nirvana. Shame there aren't computers there",
-                player.endSceneString());
+        assertEquals(R.string.anxiety_below,player.endSceneString());
     }
 }

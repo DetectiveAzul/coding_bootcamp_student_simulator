@@ -10,7 +10,7 @@ public class StatTest {
 
     @Test
     public void hasPrettyName() {
-        assertEquals("Money", Stat.MONEY.getPrettyName());
-        assertEquals("Anxiety", Stat.ANXIETY.getPrettyName());
+        assertEquals(R.string.money, Stat.MONEY.getPrettyName());
+        assertEquals(R.string.anxiety, Stat.ANXIETY.getPrettyName());
     }
 }
