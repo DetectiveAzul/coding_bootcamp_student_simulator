@@ -8,22 +8,26 @@
 
     <TextView
         android:id="@+id/npcNameTextViewId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center"
         android:text="Other person"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/cardDescriptionTextViewId"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/npcFaceImageViewId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/npcFaceImageViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/socialLifeBarId" />
 
     <ProgressBar
         android:id="@+id/anxietyBarId"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
@@ -34,38 +38,38 @@
     <ProgressBar
         android:id="@+id/moneyBarId"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/moneyImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/sleepBarId" />
 
     <ProgressBar
         android:id="@+id/sleepBarId"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/sleepImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/anxietyBarId" />
 
     <ProgressBar
         android:id="@+id/socialLifeBarId"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/socialLifeImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/moneyBarId" />
 
     <ImageView
         android:id="@+id/anxietyImageViewId"
@@ -84,9 +88,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/anxietyBarId"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anxietyImageViewId"
         app:srcCompat="@drawable/ic_sleep" />
 
     <ImageView
@@ -95,22 +99,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/sleepBarId"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleepImageViewId"
         app:srcCompat="@drawable/ic_money" />
 
     <ImageView
         android:id="@+id/socialLifeImageViewId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardTitleTextViewId"
-        app:layout_constraintStart_toEndOf="@+id/moneyBarId"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyImageViewId"
         app:srcCompat="@drawable/ic_social_life" />
 
     <TextView
@@ -126,8 +128,7 @@
         android:text="ProjectWeek"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sleepBarId"
         app:layout_constraintTop_toBottomOf="@+id/cardTitleTextViewId" />
 
     <TextView
@@ -144,24 +145,25 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moneyImageViewId" />
+        app:layout_constraintStart_toEndOf="@+id/anxietyBarId"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
 
     <TextView
         android:id="@+id/cardDescriptionTextViewId"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="CardDescription"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toTopOf="@+id/cardSecondOptionTextViewId"
+        app:layout_constraintBottom_toTopOf="@+id/cardFirstOptionTextViewId"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/npcNameTextViewId" />
 
@@ -169,7 +171,7 @@
         android:id="@+id/cardFirstOptionTextViewId"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -186,7 +188,7 @@
         android:id="@+id/cardSecondOptionTextViewId"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -219,14 +221,15 @@
         android:id="@+id/npcFaceImageViewId"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/npcNameTextViewId"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardDescriptionTextViewId"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/socialLifeBarId"
         app:layout_constraintTop_toBottomOf="@+id/cardProjectTextViewId"
         app:srcCompat="@drawable/flatmate_2" />
 

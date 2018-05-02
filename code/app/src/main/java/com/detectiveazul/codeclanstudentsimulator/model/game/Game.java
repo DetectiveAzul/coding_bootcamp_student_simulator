@@ -27,6 +27,10 @@ public class Game implements Serializable {
         this.studentJournal = new ArrayList<String>();
         buildGameDeck();
     }
+
+
+
+
     //Getter for the student journal
     public ArrayList<String> getStudentJournal() {
         return studentJournal;

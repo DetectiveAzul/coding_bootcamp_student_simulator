@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
@@ -18,6 +19,7 @@ public class EndGameActivity extends AppCompatActivity {
     private TextView endPlayerNameTextView;
     private TextView endSceneTitleTextView;
     private TextView winLoseDescriptionTextView;
+    private ImageView endImageView;
 
     //Game and Player Objects
     private Game game;
@@ -31,6 +33,7 @@ public class EndGameActivity extends AppCompatActivity {
         endPlayerNameTextView = findViewById(R.id.endPlayerNameTextViewId);
         endSceneTitleTextView = findViewById(R.id.cardTitleTextViewId);
         winLoseDescriptionTextView = findViewById(R.id.cardDescriptionTextViewId);
+        endImageView = findViewById(R.id.endImageViewId);
 
         //Getting the intent
         Intent intent = getIntent();
@@ -41,8 +44,10 @@ public class EndGameActivity extends AppCompatActivity {
         //Printing
         endPlayerNameTextView.setText(player.getName());
         endSceneTitleTextView.setText(game.getEndTitleString());
-        if (player.checkStatus() == PlayerStatus.DEAD)
+        if (player.checkStatus() == PlayerStatus.DEAD) {
             winLoseDescriptionTextView.setText(game.getDeadString());
+            endImageView.setImageResource(R.drawable.ic_skull);
+        }
 
         //changing the action bar title
         refreshTimeView();
