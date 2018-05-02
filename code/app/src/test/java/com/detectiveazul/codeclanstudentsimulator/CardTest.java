@@ -4,6 +4,7 @@ import com.detectiveazul.codeclanstudentsimulator.model.cards.Card;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.NeutralCard;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.PrizeCard;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Person;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.cards.ProjectWeekCard;
 
@@ -96,5 +97,15 @@ public class CardTest {
     @Test
     public void neutralCardNoDifficult() {
         assertEquals(0, card03.getDifficult());
+    }
+
+    @Test
+    public void cardHasPerson() {
+        assertEquals(Person.STUDENT, card00.getPerson());
+    }
+
+    @Test
+    public void personHasName() {
+        assertEquals("One of your classmates", card00.getPersonName());
     }
 }

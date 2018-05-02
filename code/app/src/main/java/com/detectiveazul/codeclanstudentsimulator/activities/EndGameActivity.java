@@ -1,19 +1,14 @@
 package com.detectiveazul.codeclanstudentsimulator.activities;
 
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.detectiveazul.codeclanstudentsimulator.R;
-import com.detectiveazul.codeclanstudentsimulator.database.Gamelog;
-import com.detectiveazul.codeclanstudentsimulator.database.GamelogDatabase;
-import com.detectiveazul.codeclanstudentsimulator.model.constants.GameStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.PlayerStatus;
 import com.detectiveazul.codeclanstudentsimulator.model.game.Game;
 import com.detectiveazul.codeclanstudentsimulator.model.player.Player;
@@ -34,8 +29,8 @@ public class EndGameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_end_game);
         //Initializing views
         endPlayerNameTextView = findViewById(R.id.endPlayerNameTextViewId);
-        endSceneTitleTextView = findViewById(R.id.endSceneTitleTextViewId);
-        winLoseDescriptionTextView = findViewById(R.id.winLoseDescriptionTextViewId);
+        endSceneTitleTextView = findViewById(R.id.cardTitleTextViewId);
+        winLoseDescriptionTextView = findViewById(R.id.cardDescriptionTextViewId);
 
         //Getting the intent
         Intent intent = getIntent();

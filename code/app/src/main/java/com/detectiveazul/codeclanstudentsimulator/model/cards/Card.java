@@ -1,6 +1,7 @@
 package com.detectiveazul.codeclanstudentsimulator.model.cards;
 
 import com.detectiveazul.codeclanstudentsimulator.model.constants.CardCollection;
+import com.detectiveazul.codeclanstudentsimulator.model.constants.Person;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.Stat;
 import com.detectiveazul.codeclanstudentsimulator.model.constants.StatEffect;
 
@@ -61,6 +62,16 @@ public class Card implements Serializable {
         return projectWeek;
     }
 
+    public Person getPerson() {
+        return card.getPerson();
+    }
+
+    public String getPersonName() {
+        return card.getPerson().getPersonDescription();
+    }
+
+    //Setters
+
     public void setProjectWeek(boolean projectWeek) {
         this.projectWeek = projectWeek;
     }
@@ -68,6 +79,8 @@ public class Card implements Serializable {
     public void setPrize(boolean prize) {
         this.prize = prize;
     }
+
+    //Getting the primaryEffects hashmaps
 
     public HashMap<Stat, Boolean> getPrimaryEffect() {
         return primaryEffect;

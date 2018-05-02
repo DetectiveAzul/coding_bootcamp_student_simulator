@@ -51,16 +51,16 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         //Initialize player views
-        playerNameTextView = findViewById(R.id.endPlayerNameId);
+        playerNameTextView = findViewById(R.id.PlayerNameTextViewId);
         anxietyBar = findViewById(R.id.anxietyBarId);
         sleepBar = findViewById(R.id.sleepBarId);
         socialLifeBar = findViewById(R.id.socialLifeBarId);
         moneyBar = findViewById(R.id.moneyBarId);
 
         //Initialize card views
-        cardNameTextView = findViewById(R.id.endSceneTitleTextViewId);
+        cardNameTextView = findViewById(R.id.cardTitleTextViewId);
         cardProjectCardTextView = findViewById(R.id.cardProjectTextViewId);
-        cardDescriptionTextView = findViewById(R.id.winLoseDescriptionTextViewId);
+        cardDescriptionTextView = findViewById(R.id.cardDescriptionTextViewId);
         cardFirstOptionTextView = findViewById(R.id.cardFirstOptionTextViewId);
         cardSecondOptionTextView = findViewById(R.id.cardSecondOptionTextViewId);
 

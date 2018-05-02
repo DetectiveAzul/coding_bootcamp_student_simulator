@@ -16,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/anxietyImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId" />
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
 
     <ProgressBar
         android:id="@+id/moneyBarId"
@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/moneyImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId" />
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
 
     <ProgressBar
         android:id="@+id/sleepBarId"
@@ -40,7 +40,7 @@
         android:layout_marginTop="16dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/sleepImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId" />
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
 
     <ProgressBar
         android:id="@+id/socialLifeBarId"
@@ -52,7 +52,7 @@
         android:layout_marginTop="16dp"
         android:progress="5"
         app:layout_constraintStart_toEndOf="@+id/socialLifeImageViewId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId" />
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId" />
 
     <ImageView
         android:id="@+id/anxietyImageViewId"
@@ -62,7 +62,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
         app:srcCompat="@drawable/ic_anxiety" />
 
     <ImageView
@@ -73,7 +73,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/anxietyBarId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
         app:srcCompat="@drawable/ic_sleep" />
 
     <ImageView
@@ -84,7 +84,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/sleepBarId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
         app:srcCompat="@drawable/ic_money" />
 
     <ImageView
@@ -95,9 +95,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/endSceneTitleTextViewId"
+        app:layout_constraintBottom_toTopOf="@+id/cardTitleTextViewId"
         app:layout_constraintStart_toEndOf="@+id/moneyBarId"
-        app:layout_constraintTop_toBottomOf="@+id/endPlayerNameId"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerNameTextViewId"
         app:srcCompat="@drawable/ic_social_life" />
 
     <TextView
@@ -115,10 +115,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endSceneTitleTextViewId" />
+        app:layout_constraintTop_toBottomOf="@+id/cardTitleTextViewId" />
 
     <TextView
-        android:id="@+id/endSceneTitleTextViewId"
+        android:id="@+id/cardTitleTextViewId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/moneyImageViewId" />
 
     <TextView
-        android:id="@+id/winLoseDescriptionTextViewId"
+        android:id="@+id/cardDescriptionTextViewId"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="24dp"
@@ -187,7 +187,7 @@
         app:layout_constraintStart_toEndOf="@+id/cardFirstOptionTextViewId" />
 
     <TextView
-        android:id="@+id/endPlayerNameId"
+        android:id="@+id/PlayerNameTextViewId"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -211,7 +211,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/winLoseDescriptionTextViewId"
+        app:layout_constraintBottom_toTopOf="@+id/cardDescriptionTextViewId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardProjectTextViewId"
