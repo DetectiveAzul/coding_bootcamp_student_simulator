@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Coding Bootcamp Simulator</string>
     <string name="app_author">Developed by Jaime Lopez</string>
-    <string name="app_version">Version 1.0</string>
+    <string name="app_version">Version 1.2</string>
     <!-- Action bar titles -->
     <string name="tutorial">Tutorial</string>
     <!-- Saved game -->
@@ -19,7 +19,7 @@
     <string name="toast_menu_log">Previous Students</string>
     <string name="toast_menu_about">About the Game</string>
     <string name="toast_menu_exit">Exit Game</string>
-    <string name="toast_menu_cannot_load">There is no saved games</string>
+    <string name="toast_menu_cannot_load">There is no saved game</string>
     <!-- Start Screen buttons -->
     <string name="new_game">New Game</string>
     <string name="load_game">Load Game</string>
@@ -31,7 +31,7 @@
     <string name="title_bar_week">Week\ </string>
     <string name="title_bar_day">\ \ Day\ </string>
     <!-- Tutorial Activity strings -->
-    <string name="tutorial_explanation">Hello player! This game puts you in the skin of a student on an intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. Course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too much is as worse as too low.</string>
+    <string name="tutorial_explanation">Hello player! This game puts you in the skin of a student on an intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. The course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too high is as bad as too low.</string>
     <string name="anxiety_explanation">This shows your Anxiety level</string>
     <string name="social_life_explanation">This shows your Social Life level</string>
     <string name="money_explanation">This shows your Money level</string>
@@ -51,37 +51,37 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="hard">Hard</string>
     <string name="extra_hard">Extra-Hard</string>
     <!-- GameStatus -->
-    <string name="win">Congratulations! You have complete the coding intensive program!</string>
-    <string name="lose">"It's a shame, but you fail!"</string>
+    <string name="win">Congratulations! You have complete the intensive coding course!</string>
+    <string name="lose">"It's a shame, but you failed!"</string>
     <string name="in_progress">Game is still in progress</string>
     <!-- Person -->
     <string name="student">One of your classmates</string>
     <string name="teacher">Today\'s instructor</string>
-    <string name="flatmate">Your fellow flatmate</string>
+    <string name="flatmate">Your flatmate</string>
     <!-- stats -->
     <string name="money">Money</string>
-    <string name="money_over">You quit the course after saving so much money that you feel you could live of it the rest of your life</string>
+    <string name="money_over">You quit the course after saving so much money that you feel you could live off it the rest of your life</string>
     <string name="money_below">You quit the course after discovering your bank account is below zero. You need to find a job real quick</string>
 
     <string name="anxiety">Anxiety</string>
-    <string name="anxiety_over">Too much social life distract you from your studies, making you fail the final exams. Next time maybe</string>
-    <string name="anxiety_below">You have lost all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
+    <string name="anxiety_over">Too much social life distracts you from your studies, making you fail the final exams. Next time, maybe</string>
+    <string name="anxiety_below">You lose all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
 
     <string name="sleep">Sleep</string>
-    <string name="sleep_over">You awaken after two years of being comatose due to an Anxiety attack. Chill out next time</string>
-    <string name="sleep_below">You have achieved such a relaxed way of life that you have ascended to the Nirvana. Shame there aren\'t computers there</string>
+    <string name="sleep_over">You wake up after two years of being comatose due to an Anxiety attack. Chill out, next time</string>
+    <string name="sleep_below">You achieve such a relaxed way of life that you have ascended to Nirvana. Shame there aren\'t any computers there</string>
 
     <string name="social_life">Social Life</string>
-    <string name="social_life_over">What? Uh? What year it is? You have spend your whole 16 weeks sleeping!</string>
+    <string name="social_life_over">What? Uh? What year it is? You have spent your whole 16 weeks sleeping!</string>
     <string name="social_life_below">You fell asleep on your finals. You should take a break from time to time</string>
 
 
     <!-- card collection -->
     <!--a card whole set-->
     <string name="m1c01_name">Beer Afternoon</string>
-    <string name="m1c01_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c01_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c01_second_option">"I need to save money, sorry</string>
+    <string name="m1c01_description">"Hey, Do you want to hang out with us?"</string>
+    <string name="m1c01_first_option">"Oh, sure! A beer sounds fine"</string>
+    <string name="m1c01_second_option">"I need to save money, sorry"</string>
     <!--a card whole set-->
     <string name="m1c02_name">Beer Afternoon</string>
     <string name="m1c02_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
