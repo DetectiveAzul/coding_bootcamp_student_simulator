@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,6 +48,8 @@ public class GameActivity extends AppCompatActivity {
     private ImageView npcFaceImageView;
     //Database
     private GamelogDatabase db;
+    //Vibration
+    Vibrator vibrator;
 
 
 
@@ -72,6 +75,10 @@ public class GameActivity extends AppCompatActivity {
         //Initialize card image
         npcNameTextView = findViewById(R.id.npcNameTextViewId);
         npcFaceImageView = findViewById(R.id.npcFaceImageViewId);
+
+        //Creating the vibrator
+        vibrator = (Vibrator) GameActivity.this.getSystemService(Context.VIBRATOR_SERVICE);
+
 
         //Load game
         game = loadGame();
@@ -137,11 +144,13 @@ public class GameActivity extends AppCompatActivity {
 
     //Player Options to Select
     public void onFirstOptionSelected(View view) {
+        vibrator.vibrate(50);
         game.playerTakeFirstOption(game.getCurrentCard());
         gameLoop();
     }
 
     public void onSecondOptionSelected(View view) {
+        vibrator.vibrate(50);
         game.playerTakeSecondOption(game.getCurrentCard());
         gameLoop();
     }
