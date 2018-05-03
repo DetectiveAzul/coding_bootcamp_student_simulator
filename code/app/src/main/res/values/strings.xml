@@ -64,16 +64,16 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="money_below" translatable="false">You quit the course after discovering your bank account is below zero. You need to find a job real quick</string>
 
     <string name="anxiety">Anxiety</string>
-    <string name="anxiety_over" translatable="false">Too much social life distracts you from your studies, making you fail the final exams. Next time, maybe</string>
-    <string name="anxiety_below" translatable="false">You lose all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
+    <string name="anxiety_over" translatable="false">You wake up after two years of being comatose due to an Anxiety attack. Chill out, next time</string>
+    <string name="anxiety_below" translatable="false">You achieve such a relaxed way of life that you have ascended to Nirvana. Shame there aren\'t any computers there</string>
 
     <string name="sleep">Sleep</string>
-    <string name="sleep_over" translatable="false">You wake up after two years of being comatose due to an Anxiety attack. Chill out, next time</string>
-    <string name="sleep_below" translatable="false">You achieve such a relaxed way of life that you have ascended to Nirvana. Shame there aren\'t any computers there</string>
+    <string name="sleep_over" translatable="false">>What? Uh? What year it is? You have spent your whole 16 weeks sleeping!</string>
+    <string name="sleep_below" translatable="false">You fell asleep on your finals. You should take a break from time to time</string>
 
     <string name="social_life">Social Life</string>
     <string name="social_life_over" translatable="false">What? Uh? What year it is? You have spent your whole 16 weeks sleeping!</string>
-    <string name="social_life_below" translatable="false">You fell asleep on your finals. You should take a break from time to time</string>
+    <string name="social_life_below" translatable="false">You lose all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
 
 
     <!-- card collection -->
