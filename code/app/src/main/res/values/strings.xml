@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Coding Bootcamp Simulator</string>
     <string name="app_author">Developed by Jaime Lopez</string>
-    <string name="app_version">Version 1.2</string>
+    <string name="app_version">Version 2.0</string>
     <!-- Action bar titles -->
     <string name="tutorial">Tutorial</string>
     <!-- Saved game -->
@@ -154,28 +154,28 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="m1c15_second_option">Shit happens, don\'t worry!</string>
     <!-- TODO -->
     <!--a card whole set-->
-    <string name="m1c16_name"></string>
-    <string name="m1c16_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c16_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c16_second_option">"I need to save money, sorry</string>
+    <string name="m1c16_name">Tons of Bugs</string>
+    <string name="m1c16_description">Your code is compiling, but there are several bugs on it that keep it far from functional work</string>
+    <string name="m1c16_first_option">Naw, I\'ll print debug</string>
+    <string name="m1c16_second_option">Use internal debugger tool from IDE</string>
     <!--a card whole set-->
-    <string name="m1c17_name"></string>
-    <string name="m1c17_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c17_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c17_second_option">"I need to save money, sorry</string>
+    <string name="m1c17_name">Code not Compiling</string>
+    <string name="m1c17_description">You have made several changes on your code and now the code is not compiling</string>
+    <string name="m1c17_first_option">Add several semicolons everywhere</string>
+    <string name="m1c17_second_option">Go have some beers, I\'ll fix it tomorrow</string>
     <!--a card whole set-->
-    <string name="m1c18_name"></string>
-    <string name="m1c18_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c18_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c18_second_option">"I need to save money, sorry</string>
+    <string name="m1c18_name">Project Brief</string>
+    <string name="m1c18_description">These are the brief you can select for your next project</string>
+    <string name="m1c18_first_option">Pick one of them</string>
+    <string name="m1c18_second_option">Invent my own project</string>
     <!--a card whole set-->
-    <string name="m1c19_name"></string>
-    <string name="m1c19_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c19_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c19_second_option">"I need to save money, sorry</string>
+    <string name="m1c19_name">Powerpoint Madness</string>
+    <string name="m1c19_description">Next Friday you need to present in front of the class your latest project</string>
+    <string name="m1c19_first_option">Make some slides with wireframes and planning</string>
+    <string name="m1c19_second_option">Make a live demo of the app</string>
     <!--a card whole set-->
-    <string name="m1c20_name"></string>
-    <string name="m1c20_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c20_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c20_second_option">"I need to save money, sorry</string>
+    <string name="m1c20_name">Musical Chairs</string>
+    <string name="m1c20_description">Hey man, can I sit there today?</string>
+    <string name="m1c20_first_option">No! This is my spot!</string>
+    <string name="m1c20_second_option">Yes, sure, take it</string>
 </resources>
