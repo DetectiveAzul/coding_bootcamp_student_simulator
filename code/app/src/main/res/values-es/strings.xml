@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Coding Bootcamp Simulator</string>
+    <string name="app_author">Desarrollado por Jaime López</string>
+    <string name="app_version">Versión 2.0</string>
+    <string name="menu_start">Inicio</string>
+    <string name="menu_log">Estudiantes previos</string>
+    <string name="menu_about">Sobre el juego</string>
+    <string name="menu_exit">Volver a Inicio</string>
+    <string name="menu_exit_app">Finalizar App</string>
+    <string name="menu_diary">Diario de Estudiante</string>
+    <string name="reset_ranking">Reiniciar Ranking</string>
+    <string name="toast_menu_start">Inicio</string>
+    <string name="toast_menu_log">Estudiantes previos</string>
+    <string name="toast_menu_about">Sobre el juego</string>
+    <string name="toast_menu_exit">Salir del Juego</string>
+    <string name="toast_menu_cannot_load">No hay partida guardada</string>
+    <string name="new_game">Nuevo juego</string>
+    <string name="load_game">Cargar juego</string>
+    <string name="ranking">Ranking</string>
+    <string name="new_player">Introduce nombre del estudiante</string>
+    <string name="new_player_short">Nombre del estudiante</string>
+    <string name="title_bar_week">Semana</string>
+    <string name="title_bar_day">Día</string>
+    <string name="anxiety_explanation">Esto muestra tu nivel de Ansiedad</string>
+    <string name="social_life_explanation">Esto muestra tu nivel de Vida Social</string>
+    <string name="money_explanation">Esto muestra tu nivel Económico</string>
+    <string name="sleep_explanation">Esot muestra tu nivel de Sueño</string>
+    <string name="tutorial_button">Entendido</string>
+    <string name="easy">Fácil</string>
+    <string name="medium">Medio</string>
+    <string name="hard">Difícil</string>
+    <string name="extra_hard">Extra Difícil</string>
+    <string name="win">"¡Felicidades! Has completado el curso intensivo de programación. "</string>
+    <string name="lose">Es una lástima, pero fracasaste</string>
+    <string name="in_progress">El juego sigue en progreso</string>
+    <string name="student">Uno de tus compañeros</string>
+    <string name="teacher">El instructor de hoy</string>
+    <string name="flatmate">Tu compañero de piso</string>
+    <string name="money">Economía</string>
+    <string name="anxiety">Ansiedad</string>
+    <string name="sleep">Sueño</string>
+    <string name="social_life">Vida Social</string>
+</resources>

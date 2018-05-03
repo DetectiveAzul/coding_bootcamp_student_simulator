@@ -3,9 +3,9 @@
     <string name="app_author">Developed by Jaime Lopez</string>
     <string name="app_version">Version 2.0</string>
     <!-- Action bar titles -->
-    <string name="tutorial">Tutorial</string>
+    <string name="tutorial" translatable="false">Tutorial</string>
     <!-- Saved game -->
-    <string name="saved_game">SAVED GAME</string>
+    <string name="saved_game" translatable="false">SAVED GAME</string>
     <!-- Menu buttons -->
     <string name="menu_start">Start Menu</string>
     <string name="menu_log">Previous Students</string>
@@ -31,21 +31,21 @@
     <string name="title_bar_week">Week\ </string>
     <string name="title_bar_day">\ \ Day\ </string>
     <!-- Tutorial Activity strings -->
-    <string name="tutorial_explanation">Hello player! This game puts you in the skin of a student on an intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. The course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too high is as bad as too low.</string>
+    <string name="tutorial_explanation" translatable="false">Hello player! This game puts you in the skin of a student on an intensive software developer course. You\'re changing careers, so your objective is to get to the end of the course to be able to get a new job. The course is 16 weeks long, so you need to keep focused and balanced all your stats to succeed. Remember, too high is as bad as too low.</string>
     <string name="anxiety_explanation">This shows your Anxiety level</string>
     <string name="social_life_explanation">This shows your Social Life level</string>
     <string name="money_explanation">This shows your Money level</string>
     <string name="sleep_explanation">This shows your Sleep level</string>
     <string name="tutorial_button">Understood</string>
     <!-- End scene default description -->
-    <string name="end_scene_win">You have succeeded on completing the whole intensive software developer program. You invested tons of time and money, but thanks to that, now you have become a junior developer</string>
-    <string name="about_info">This app was developed during week 9 of the CodeClan intensive programming course. Based on a card game project brief, I have tweaked the idea into a simulation game. The player receives a card representing an event during the (parodic) daily life of a bootcamp student and their decision will affect a set of stats (money, sleep, anxiety, social life). If they are not balanced, they drop the course and the game will finish.
+    <string name="end_scene_win" translatable="false">You have succeeded on completing the whole intensive software developer program. You invested tons of time and money, but thanks to that, now you have become a junior developer</string>
+    <string name="about_info" translatable="false">This app was developed during week 9 of the CodeClan intensive programming course. Based on a card game project brief, I have tweaked the idea into a simulation game. The player receives a card representing an event during the (parodic) daily life of a bootcamp student and their decision will affect a set of stats (money, sleep, anxiety, social life). If they are not balanced, they drop the course and the game will finish.
 
 MVP is to have the Game logic developed in JAVA, and afterwards, as an extension, this will be transferred into a basic Android UI. As a final task, the ability to load/save the game and a ranking log with past game scores recorded with SQLite through Android Room.</string>
-    <string name="icon_credits">Icons made by dDara from www.flaticon.com are licensed Creative Commons BY 3.0</string>
-    <string name="git_repo">If you\'re interested on looking at the source code, I encourage you to access the GitHub repo I posted on the following link: https://github.com/DetectiveAzul/codeclan_student_simulator</string>
+    <string name="icon_credits" translatable="false">Icons made by dDara from www.flaticon.com are licensed Creative Commons BY 3.0</string>
+    <string name="git_repo" translatable="false">If you\'re interested on looking at the source code, I encourage you to access the GitHub repo I posted on the following link: https://github.com/DetectiveAzul/codeclan_student_simulator</string>
     <!-- Difficulty strings -->
-    <string name="neutral">Neutral</string>
+    <string name="neutral" translatable="false">Neutral</string>
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
@@ -60,122 +60,122 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="flatmate">Your flatmate</string>
     <!-- stats -->
     <string name="money">Money</string>
-    <string name="money_over">You quit the course after saving so much money that you feel you could live off it the rest of your life</string>
-    <string name="money_below">You quit the course after discovering your bank account is below zero. You need to find a job real quick</string>
+    <string name="money_over" translatable="false">You quit the course after saving so much money that you feel you could live off it the rest of your life</string>
+    <string name="money_below" translatable="false">You quit the course after discovering your bank account is below zero. You need to find a job real quick</string>
 
     <string name="anxiety">Anxiety</string>
-    <string name="anxiety_over">Too much social life distracts you from your studies, making you fail the final exams. Next time, maybe</string>
-    <string name="anxiety_below">You lose all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
+    <string name="anxiety_over" translatable="false">Too much social life distracts you from your studies, making you fail the final exams. Next time, maybe</string>
+    <string name="anxiety_below" translatable="false">You lose all your friends because you only focused on your studies. You\'re so sad that you quit the course</string>
 
     <string name="sleep">Sleep</string>
-    <string name="sleep_over">You wake up after two years of being comatose due to an Anxiety attack. Chill out, next time</string>
-    <string name="sleep_below">You achieve such a relaxed way of life that you have ascended to Nirvana. Shame there aren\'t any computers there</string>
+    <string name="sleep_over" translatable="false">You wake up after two years of being comatose due to an Anxiety attack. Chill out, next time</string>
+    <string name="sleep_below" translatable="false">You achieve such a relaxed way of life that you have ascended to Nirvana. Shame there aren\'t any computers there</string>
 
     <string name="social_life">Social Life</string>
-    <string name="social_life_over">What? Uh? What year it is? You have spent your whole 16 weeks sleeping!</string>
-    <string name="social_life_below">You fell asleep on your finals. You should take a break from time to time</string>
+    <string name="social_life_over" translatable="false">What? Uh? What year it is? You have spent your whole 16 weeks sleeping!</string>
+    <string name="social_life_below" translatable="false">You fell asleep on your finals. You should take a break from time to time</string>
 
 
     <!-- card collection -->
     <!--a card whole set-->
-    <string name="m1c01_name">Beer Afternoon</string>
-    <string name="m1c01_description">Hey, Do you want to hang out with us?</string>
-    <string name="m1c01_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c01_second_option">I need to save money, sorry</string>
+    <string name="m1c01_name" translatable="false">Beer Afternoon</string>
+    <string name="m1c01_description" translatable="false">Hey, Do you want to hang out with us?</string>
+    <string name="m1c01_first_option" translatable="false">Oh, sure! A beer sounds fine</string>
+    <string name="m1c01_second_option" translatable="false">I need to save money, sorry</string>
     <!--a card whole set-->
-    <string name="m1c02_name">Silicon Valley</string>
-    <string name="m1c02_description">"I\'m starting Silicon Valley, do you want to see the first episode with me?"</string>
-    <string name="m1c02_first_option">First episode only?</string>
-    <string name="m1c02_second_option">You never watch just an episode</string>
+    <string name="m1c02_name" translatable="false">Silicon Valley</string>
+    <string name="m1c02_description" translatable="false">"I\'m starting Silicon Valley, do you want to see the first episode with me?"</string>
+    <string name="m1c02_first_option" translatable="false">First episode only?</string>
+    <string name="m1c02_second_option" translatable="false">You never watch just an episode</string>
     <!--a card whole set-->
-    <string name="m1c03_name">Teacher tip</string>
-    <string name="m1c03_description">I really think if you re-factor all this code it\'s gonna be easier to continue</string>
-    <string name="m1c03_first_option">Re-factoring all night long</string>
-    <string name="m1c03_second_option">Leave it, I need sleep</string>
+    <string name="m1c03_name" translatable="false">Teacher tip</string>
+    <string name="m1c03_description" translatable="false">I really think if you re-factor all this code it\'s gonna be easier to continue</string>
+    <string name="m1c03_first_option" translatable="false">Re-factoring all night long</string>
+    <string name="m1c03_second_option" translatable="false">Leave it, I need sleep</string>
     <!--a card whole set-->
-    <string name="m1c04_name">Freelancing</string>
-    <string name="m1c04_description">I have a friend that would like to have a website. They will pay you</string>
-    <string name="m1c04_first_option">Extra money sounds great, but I\'ll need to work extra</string>
-    <string name="m1c04_second_option">No way man, studying is hard enough</string>
+    <string name="m1c04_name" translatable="false">Freelancing</string>
+    <string name="m1c04_description" translatable="false">I have a friend that would like to have a website. They will pay you</string>
+    <string name="m1c04_first_option" translatable="false">Extra money sounds great, but I\'ll need to work extra</string>
+    <string name="m1c04_second_option" translatable="false">No way man, studying is hard enough</string>
     <!--a card whole set-->
-    <string name="m1c05_name">Cinema night</string>
-    <string name="m1c05_description">Latest Marvel movie is on screen, you have been speaking of it for the last year</string>
-    <string name="m1c05_first_option">I don\'t have money, but I hate spoilers</string>
-    <string name="m1c05_second_option">Well, I can avoid spoilers for some time</string>
+    <string name="m1c05_name" translatable="false">Cinema night</string>
+    <string name="m1c05_description" translatable="false">Latest Marvel movie is on screen, you have been speaking of it for the last year</string>
+    <string name="m1c05_first_option" translatable="false">I don\'t have money, but I hate spoilers</string>
+    <string name="m1c05_second_option" translatable="false">Well, I can avoid spoilers for some time</string>
     <!--a card whole set-->
-    <string name="m1c06_name">Cat Meme</string>
-    <string name="m1c06_description">Look, look, this latest cat meme is great</string>
-    <string name="m1c06_first_option">Spend the whole night memeing</string>
-    <string name="m1c06_second_option">Grow up, these memes are for kids</string>
+    <string name="m1c06_name" translatable="false">Cat Meme</string>
+    <string name="m1c06_description" translatable="false">Look, look, this latest cat meme is great</string>
+    <string name="m1c06_first_option" translatable="false">Spend the whole night memeing</string>
+    <string name="m1c06_second_option" translatable="false">Grow up, these memes are for kids</string>
     <!--a card whole set-->
-    <string name="m1c07_name">Student in Need</string>
-    <string name="m1c07_description">I know you’re about to head home but I’m really stuck on my code, do you mind giving it a look?</string>
-    <string name="m1c07_first_option">Of course! What are cohortmates for?!</string>
-    <string name="m1c07_second_option">I’m exhausted, I’m going home</string>
+    <string name="m1c07_name" translatable="false">Student in Need</string>
+    <string name="m1c07_description" translatable="false">I know you’re about to head home but I’m really stuck on my code, do you mind giving it a look?</string>
+    <string name="m1c07_first_option" translatable="false">Of course! What are cohortmates for?!</string>
+    <string name="m1c07_second_option" translatable="false">I’m exhausted, I’m going home</string>
     <!--a card whole set-->
-    <string name="m1c08_name">All Day Lab</string>
-    <string name="m1c08_description">OK, today is an all day lab. Brace brace!</string>
-    <string name="m1c08_first_option">I’m going to take regular breaks to make sure I do my work properly</string>
-    <string name="m1c08_second_option">Hey guys, let’s get into a group and work together</string>
+    <string name="m1c08_name" translatable="false">All Day Lab</string>
+    <string name="m1c08_description" translatable="false">OK, today is an all day lab. Brace brace!</string>
+    <string name="m1c08_first_option" translatable="false">I’m going to take regular breaks to make sure I do my work properly</string>
+    <string name="m1c08_second_option" translatable="false">Hey guys, let’s get into a group and work together</string>
     <!--a card whole set-->
-    <string name="m1c09_name">Cheating?</string>
-    <string name="m1c09_description">I will pay you £500 if you do my Java project</string>
-    <string name="m1c09_first_option">Hmmm, I could really do with some money</string>
-    <string name="m1c09_second_option">No way man!</string>
+    <string name="m1c09_name" translatable="false">Cheating?</string>
+    <string name="m1c09_description" translatable="false">I will pay you £500 if you do my Java project</string>
+    <string name="m1c09_first_option" translatable="false">Hmmm, I could really do with some money</string>
+    <string name="m1c09_second_option" translatable="false">No way man!</string>
     <!--a card whole set-->
-    <string name="m1c10_name">Pizza Evening</string>
-    <string name="m1c10_description">Forget your homework, let’s order in some pizza and play a board game</string>
-    <string name="m1c10_first_option">That’s exactly what I need today</string>
-    <string name="m1c10_second_option">Sorry, homework comes first!</string>
+    <string name="m1c10_name" translatable="false">Pizza Evening</string>
+    <string name="m1c10_description" translatable="false">Forget your homework, let’s order in some pizza and play a board game</string>
+    <string name="m1c10_first_option" translatable="false">That’s exactly what I need today</string>
+    <string name="m1c10_second_option" translatable="false">Sorry, homework comes first!</string>
     <!--a card whole set-->
-    <string name="m1c11_name">Broken Fridge</string>
-    <string name="m1c11_description">Our fridge just died</string>
-    <string name="m1c11_first_option">Damn, we should buy a new one</string>
-    <string name="m1c11_second_option">Nah, I\'ll buy paninis everyday</string>
+    <string name="m1c11_name" translatable="false">Broken Fridge</string>
+    <string name="m1c11_description" translatable="false">Our fridge just died</string>
+    <string name="m1c11_first_option" translatable="false">Damn, we should buy a new one</string>
+    <string name="m1c11_second_option" translatable="false">Nah, I\'ll buy paninis everyday</string>
     <!--a card whole set-->
-    <string name="m1c12_name">Stolen Charger</string>
-    <string name="m1c12_description">Your laptop charger disappeared during Boardgame night</string>
-    <string name="m1c12_first_option">Damn it! I\'ll blame the cohort and recover it</string>
-    <string name="m1c12_second_option">I guess I\'m buying a new one</string>
+    <string name="m1c12_name" translatable="false">Stolen Charger</string>
+    <string name="m1c12_description" translatable="false">Your laptop charger disappeared during Boardgame night</string>
+    <string name="m1c12_first_option" translatable="false">Damn it! I\'ll blame the cohort and recover it</string>
+    <string name="m1c12_second_option" translatable="false">I guess I\'m buying a new one</string>
     <!--a card whole set-->
-    <string name="m1c13_name">Nested For Loops</string>
-    <string name="m1c13_description">We\'re grouping together to study nested loops tonight</string>
-    <string name="m1c13_first_option">Great! I\'ll join you guys!</string>
-    <string name="m1c13_second_option">It\'s really late, I\'ll head home</string>
+    <string name="m1c13_name" translatable="false">Nested For Loops</string>
+    <string name="m1c13_description" translatable="false">We\'re grouping together to study nested loops tonight</string>
+    <string name="m1c13_first_option" translatable="false">Great! I\'ll join you guys!</string>
+    <string name="m1c13_second_option" translatable="false">It\'s really late, I\'ll head home</string>
     <!--a card whole set-->
-    <string name="m1c14_name">S.O.L.I.D.</string>
-    <string name="m1c14_description">Your homework today is to watch this series of videos about Object Oriented Principles</string>
-    <string name="m1c14_first_option">I still need to study yesterday\'s class </string>
-    <string name="m1c14_second_option">I can study, watch the videos then, no sleep tonight</string>
+    <string name="m1c14_name" translatable="false">S.O.L.I.D.</string>
+    <string name="m1c14_description" translatable="false">Your homework today is to watch this series of videos about Object Oriented Principles</string>
+    <string name="m1c14_first_option" translatable="false">I still need to study yesterday\'s class </string>
+    <string name="m1c14_second_option" translatable="false">I can study, watch the videos then, no sleep tonight</string>
     <!--a card whole set-->
-    <string name="m1c15_name">Lids Up</string>
-    <string name="m1c15_description">Oh, shit, sorry. I drip coffee on your keyboard</string>
-    <string name="m1c15_first_option">C\'mon man! Buy me a new one</string>
-    <string name="m1c15_second_option">Shit happens, don\'t worry!</string>
+    <string name="m1c15_name" translatable="false">Lids Up</string>
+    <string name="m1c15_description" translatable="false">Oh, shit, sorry. I drip coffee on your keyboard</string>
+    <string name="m1c15_first_option" translatable="false">C\'mon man! Buy me a new one</string>
+    <string name="m1c15_second_option" translatable="false">Shit happens, don\'t worry!</string>
     <!-- TODO -->
     <!--a card whole set-->
-    <string name="m1c16_name">Tons of Bugs</string>
-    <string name="m1c16_description">Your code is compiling, but there are several bugs on it that keep it far from functional work</string>
-    <string name="m1c16_first_option">Naw, I\'ll print debug</string>
-    <string name="m1c16_second_option">Use internal debugger tool from IDE</string>
+    <string name="m1c16_name" translatable="false">Tons of Bugs</string>
+    <string name="m1c16_description" translatable="false">Your code is compiling, but there are several bugs on it that keep it far from functional work</string>
+    <string name="m1c16_first_option" translatable="false">Naw, I\'ll print debug</string>
+    <string name="m1c16_second_option" translatable="false">Use internal debugger tool from IDE</string>
     <!--a card whole set-->
-    <string name="m1c17_name">Code not Compiling</string>
-    <string name="m1c17_description">You have made several changes on your code and now the code is not compiling</string>
-    <string name="m1c17_first_option">Add several semicolons everywhere</string>
-    <string name="m1c17_second_option">Go have some beers, I\'ll fix it tomorrow</string>
+    <string name="m1c17_name" translatable="false">Code not Compiling</string>
+    <string name="m1c17_description" translatable="false">You have made several changes on your code and now the code is not compiling</string>
+    <string name="m1c17_first_option" translatable="false">Add several semicolons everywhere</string>
+    <string name="m1c17_second_option" translatable="false">Go have some beers, I\'ll fix it tomorrow</string>
     <!--a card whole set-->
-    <string name="m1c18_name">Project Brief</string>
-    <string name="m1c18_description">These are the brief you can select for your next project</string>
-    <string name="m1c18_first_option">Pick one of them</string>
-    <string name="m1c18_second_option">Invent my own project</string>
+    <string name="m1c18_name" translatable="false">Project Brief</string>
+    <string name="m1c18_description" translatable="false">These are the brief you can select for your next project</string>
+    <string name="m1c18_first_option" translatable="false">Pick one of them</string>
+    <string name="m1c18_second_option" translatable="false">Invent my own project</string>
     <!--a card whole set-->
-    <string name="m1c19_name">Powerpoint Madness</string>
-    <string name="m1c19_description">Next Friday you need to present in front of the class your latest project</string>
-    <string name="m1c19_first_option">Make some slides with wireframes and planning</string>
-    <string name="m1c19_second_option">Make a live demo of the app</string>
+    <string name="m1c19_name" translatable="false">Powerpoint Madness</string>
+    <string name="m1c19_description" translatable="false">Next Friday you need to present in front of the class your latest project</string>
+    <string name="m1c19_first_option" translatable="false">Make some slides with wireframes and planning</string>
+    <string name="m1c19_second_option" translatable="false">Make a live demo of the app</string>
     <!--a card whole set-->
-    <string name="m1c20_name">Musical Chairs</string>
-    <string name="m1c20_description">Hey man, can I sit there today?</string>
-    <string name="m1c20_first_option">No! This is my spot!</string>
-    <string name="m1c20_second_option">Yes, sure, take it</string>
+    <string name="m1c20_name" translatable="false">Musical Chairs</string>
+    <string name="m1c20_description" translatable="false">Hey man, can I sit there today?</string>
+    <string name="m1c20_first_option" translatable="false">No! This is my spot!</string>
+    <string name="m1c20_second_option" translatable="false">Yes, sure, take it</string>
 </resources>
