@@ -107,8 +107,6 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="m1c06_description">Look, look, this latest cat meme is great</string>
     <string name="m1c06_first_option">Spend the whole night memeing</string>
     <string name="m1c06_second_option">Grow up, these memes are for kids</string>
-
-
     <!--a card whole set-->
     <string name="m1c07_name">Student in Need</string>
     <string name="m1c07_description">I know you’re about to head home but I’m really stuck on my code, do you mind giving it a look?</string>
@@ -129,54 +127,54 @@ MVP is to have the Game logic developed in JAVA, and afterwards, as an extension
     <string name="m1c10_description">Forget your homework, let’s order in some pizza and play a board game</string>
     <string name="m1c10_first_option">That’s exactly what I need today</string>
     <string name="m1c10_second_option">Sorry, homework comes first!</string>
+    <!--a card whole set-->
+    <string name="m1c11_name">Broken Fridge</string>
+    <string name="m1c11_description">Our fridge just died</string>
+    <string name="m1c11_first_option">Damn, we should buy a new one</string>
+    <string name="m1c11_second_option">Nah, I\'ll buy paninis everyday</string>
+    <!--a card whole set-->
+    <string name="m1c12_name">Stolen Charger</string>
+    <string name="m1c12_description">Your laptop charger disappeared during Boardgame night</string>
+    <string name="m1c12_first_option">Damn it! I\'ll blame the cohort and recover it</string>
+    <string name="m1c12_second_option">I guess I\'m buying a new one</string>
+    <!--a card whole set-->
+    <string name="m1c13_name">Nested For Loops</string>
+    <string name="m1c13_description">We\'re grouping together to study nested loops tonight</string>
+    <string name="m1c13_first_option">Great! I\'ll join you guys!</string>
+    <string name="m1c13_second_option">It\'s really late, I\'ll head home</string>
+    <!--a card whole set-->
+    <string name="m1c14_name">S.O.L.I.D.</string>
+    <string name="m1c14_description">Your homework today is to watch this series of videos about Object Oriented Principles</string>
+    <string name="m1c14_first_option">I still need to study yesterday\'s class </string>
+    <string name="m1c14_second_option">I can study, watch the videos then, no sleep tonight</string>
+    <!--a card whole set-->
+    <string name="m1c15_name">Lids Up</string>
+    <string name="m1c15_description">Oh, shit, sorry. I drip coffee on your keyboard</string>
+    <string name="m1c15_first_option">C\'mon man! Buy me a new one</string>
+    <string name="m1c15_second_option">Shit happens, don\'t worry!</string>
     <!-- TODO -->
     <!--a card whole set-->
-    <string name="m1c11_name">Beer Afternoon</string>
-    <string name="m1c11_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c11_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c11_second_option">"I need to save money, sorry</string>
-    <!--a card whole set-->
-    <string name="m1c12_name">Beer Afternoon</string>
-    <string name="m1c12_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c12_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c12_second_option">"I need to save money, sorry</string>
-    <!--a card whole set-->
-    <string name="m1c13_name">Beer Afternoon</string>
-    <string name="m1c13_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c13_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c13_second_option">"I need to save money, sorry</string>
-    <!--a card whole set-->
-    <string name="m1c14_name">Beer Afternoon</string>
-    <string name="m1c14_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c14_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c14_second_option">"I need to save money, sorry</string>
-    <!--a card whole set-->
-    <string name="m1c15_name">Beer Afternoon</string>
-    <string name="m1c15_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
-    <string name="m1c15_first_option">Oh, sure! A beer sounds fine</string>
-    <string name="m1c15_second_option">"I need to save money, sorry</string>
-    <!--a card whole set-->
-    <string name="m1c16_name">Beer Afternoon</string>
+    <string name="m1c16_name"></string>
     <string name="m1c16_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
     <string name="m1c16_first_option">Oh, sure! A beer sounds fine</string>
     <string name="m1c16_second_option">"I need to save money, sorry</string>
     <!--a card whole set-->
-    <string name="m1c17_name">Beer Afternoon</string>
+    <string name="m1c17_name"></string>
     <string name="m1c17_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
     <string name="m1c17_first_option">Oh, sure! A beer sounds fine</string>
     <string name="m1c17_second_option">"I need to save money, sorry</string>
     <!--a card whole set-->
-    <string name="m1c18_name">Beer Afternoon</string>
+    <string name="m1c18_name"></string>
     <string name="m1c18_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
     <string name="m1c18_first_option">Oh, sure! A beer sounds fine</string>
     <string name="m1c18_second_option">"I need to save money, sorry</string>
     <!--a card whole set-->
-    <string name="m1c19_name">Beer Afternoon</string>
+    <string name="m1c19_name"></string>
     <string name="m1c19_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
     <string name="m1c19_first_option">Oh, sure! A beer sounds fine</string>
     <string name="m1c19_second_option">"I need to save money, sorry</string>
     <!--a card whole set-->
-    <string name="m1c20_name">Beer Afternoon</string>
+    <string name="m1c20_name"></string>
     <string name="m1c20_description">One of your classmates approaches: Hey, Do you want to hang out with us?</string>
     <string name="m1c20_first_option">Oh, sure! A beer sounds fine</string>
     <string name="m1c20_second_option">"I need to save money, sorry</string>
