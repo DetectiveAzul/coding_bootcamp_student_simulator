@@ -20,12 +20,12 @@
     <string name="ranking">Ranking</string>
     <string name="new_player">Introduce nombre del estudiante</string>
     <string name="new_player_short">Nombre del estudiante</string>
-    <string name="title_bar_week">Semana</string>
-    <string name="title_bar_day">Día</string>
+    <string name="title_bar_week">"Semana "</string>
+    <string name="title_bar_day">"  Día  "</string>
     <string name="anxiety_explanation">Esto muestra tu nivel de Ansiedad</string>
     <string name="social_life_explanation">Esto muestra tu nivel de Vida Social</string>
     <string name="money_explanation">Esto muestra tu nivel Económico</string>
-    <string name="sleep_explanation">Esot muestra tu nivel de Sueño</string>
+    <string name="sleep_explanation">Esto muestra tu nivel de Sueño</string>
     <string name="tutorial_button">Entendido</string>
     <string name="easy">Fácil</string>
     <string name="medium">Medio</string>
